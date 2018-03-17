@@ -1,38 +1,45 @@
 import pandas as pd
+from html.parser import HTMLParser
 
-##class teamColors(object):
-##    def __init__(self, name, color1, color2, alt):
-##        self.name = name
-##        self.color1 = color1
-##        self.color2 = color2
-##        self.alt = alt
-##
-##    def __str__(self):
-##        return("Team colors: \n"
-##               "Name: {0}\n"
-##               "Color 1: {1}\n"
-##               "Color 2: {2}\n"
-##               .format(self.name, self.color1, self.color2))
-           
 
-wb = pd.read_excel('Team Colors.xlsx')
+class team(object):
+    name, school, color1, color2, alt1, alt2, player1, player2, player3, player4, player5 = ['']*11
+    init = False
+    def __init__(self):
+        init = True
 
-num = len(wb.index)
+def teamColor(name):
 
-name = input('Enter School Name: ')
+    wb = pd.read_excel('Team Colors.xlsx')
 
-color_1 = ''
-color_2 = ''
+    num = len(wb.index)
 
-for k in range(0,num):
-    if wb.iloc[k]['School'] == name:
-        color_1 = wb.iloc[k]['Color 1']
-        color_2 = wb.iloc[k]['Color 2']
-if color_1 == '':    
-    print('School not found\nEnter hex codes of school (# included)')
-    color_1 = input('Color 1: ')
-    color_2 = input('Color 2: ')
+    color1 = ''
+    color2 = ''
 
-print(color_1)
-print(color_2)
+    for k in range(0,num):
+        if wb.iloc[k]['School'] == name:
+            color1 = wb.iloc[k]['Color 1']
+            color2 = wb.iloc[k]['Color 2']
+    if color1 == '':    
+        print('School not found\nEnter hex codes of school (# included)')
+        color1 = input('Color 1: ')
+        color2 = input('Color 2: ')
 
+    return(color1, color2)
+
+def newMatch():
+
+    t1 = team()
+    t2 = team()
+    t1.school = input('Enter Home (blue team) School Name: ')
+    t2.school = input('Enter Away (orange team) School Name: ')
+    t1.color1, t1.color2 = teamColor(t1.school)
+    t2.color1, t2.color2 = teamColor(t2.school)
+    print("Home team: {0}\n\tColors: {1}, {2}" .format(t1.school,t1.color1,t1.color2))
+    print("Away team: {0}\n\tColors: {1}, {2}" .format(t2.school,t2.color1,t2.color2))
+    
+##parser = MyHTMLParser()
+##parser.feed('team1.html')
+
+##newMatch()
