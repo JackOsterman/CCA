@@ -1,14 +1,14 @@
 import pandas as pd
-from html.parser import HTMLParser
+import webcolors
 
 
 class team(object):
-    name, school, color1, color2, alt1, alt2, player1, player2, player3, player4, player5 = ['']*11
+    name, school, side, color1, color2, alt1, alt2, player1, player2, player3, player4, player5 = ['']*12
     init = False
     def __init__(self):
         init = True
 
-def teamColor(name):
+def getColor(name):
 
     wb = pd.read_excel('Team Colors.xlsx')
 
@@ -28,18 +28,43 @@ def teamColor(name):
 
     return(color1, color2)
 
+def writeHTML(side,color1,color2):
+    s = ['<html>\n<head>\n<meta name="viewport" content="width=device-width, initial-scale=1">\n<style>\n#secondary-color {\n  height: 100px;\n  width: 100px;\n  overflow: hidden;\n  background-color: ',
+         '', ';\n}\n\n#triangle-topleft {\n  width: 0;\n  height: 0;\n  border-top: 100px solid ','',
+         ';\n  border-right: 100px solid transparent;\n}\n\n</style>\n</head>\n<body>\n\t<div id="secondary-color">\n\t\t<div id="triangle-topleft"></div>\n\t</div>\n</body>\n</html> ']
+    s[3] = color1
+    s[1] = color2
+
+    s1 = "".join(s)
+    
+    if side == 'blue':
+        h = open('blueColors.html','w')
+        h.write(s1)
+        h.close()
+    else:
+        h = open('orangeColors.html','w')
+        h.write(s1)
+        h.close()
+
+def hexToRGB(color):
+    r,g,b = webcolors.hex_to_rgb(color)
+    return(r,g,b)
+        
+    
+
 def newMatch():
 
     t1 = team()
     t2 = team()
+    t1.side, t2.side = 'blue','orange'
     t1.school = input('Enter Home (blue team) School Name: ')
     t2.school = input('Enter Away (orange team) School Name: ')
-    t1.color1, t1.color2 = teamColor(t1.school)
-    t2.color1, t2.color2 = teamColor(t2.school)
-    print("Home team: {0}\n\tColors: {1}, {2}" .format(t1.school,t1.color1,t1.color2))
-    print("Away team: {0}\n\tColors: {1}, {2}" .format(t2.school,t2.color1,t2.color2))
+    t1.color1, t1.color2 = getColor(t1.school)
+    t2.color1, t2.color2 = getColor(t2.school)
+    print("Home team: {0}\n\tHex Colors: {1}, {2}\n\tRGB colors: {3}, {4}" .format(t1.school,t1.color1,t1.color2,hexToRGB(t1.color1),hexToRGB(t1.color2)))
+    print("Away team: {0}\n\tHex Colors: {1}, {2}\n\tRGB colors: {3}, {4}" .format(t2.school,t2.color1,t2.color2,hexToRGB(t2.color1),hexToRGB(t2.color2)))
+    writeHTML(t1.side,t1.color1,t1.color2)
+    writeHTML(t2.side,t2.color1,t2.color2)
     
-##parser = MyHTMLParser()
-##parser.feed('team1.html')
 
-##newMatch()
+newMatch()
