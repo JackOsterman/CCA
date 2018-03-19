@@ -5,11 +5,35 @@ from PIL import Image, ImageDraw
 
 
 class team(object):
+
     name, school, scoreboard, side, color1, color2, alt1, alt2 = ['']*8
     roster = ['']*5
+
     init = False
     def __init__(self):
         init = True
+
+    def createTeam(self):
+        self.name = input('Enter {0} side Team Name: '.format(self.side))
+        self.school = getSchool(self.name)
+        self.color1, self.color2 = getColor(self.school)
+        print("{5} team: {0}\n\tHex Colors: {1}, {2}\n\tRGB colors: {3}, {4}" .format(self.school,self.color1,self.color2,hexToRGB(self.color1),hexToRGB(self.color2),self.side))
+
+        self.roster = getRoster(self.name)
+
+        self.roster = changeRoster(self.name,self.roster)
+
+        setRoster(self.side,self.roster)
+
+        print('Generating HTML Files...')
+        createHTML(self.side,self.color1,self.color2)
+        print('HTML files generated\n')
+
+        print('Generating PNG files...')
+        createPNG(self.side,self.color1,self.color2)
+        print('PNG files generated\n')
+
+
 
 def getColor(name):
 
@@ -60,7 +84,7 @@ def getSchool(name):
     return(school)
 
 def printRoster(name, roster):
-    print('{0} roster:\n{1}'.format(name,roster))
+    # print('{0} roster:\n{1}'.format(name,roster))
     for k in range(0,5):
         print('[{0}] {1}'.format(k,roster[k]))
 
@@ -75,7 +99,7 @@ def changeRoster(name,roster):
     choice = 'y'
     while choice == 'y':
         printRoster(name,roster)
-        choice = input('Change player name? (y/n)')
+        choice = input('Change player name? (y/n): ')
         if choice == 'y':
             roster = changePlayer(roster)
     return(roster)
@@ -118,34 +142,35 @@ def newMatch():
     t2 = team()
     t1.side, t2.side = 'blue','orange'
 
-    t1.name = input('Enter Home (blue team) Team Name: ')
-    t1.school = getSchool(t1.name)
-    t1.color1, t1.color2 = getColor(t1.school)
+    t1.createTeam()
+    t2.createTeam()
 
-    t2.name = input('Enter Away (orange team) Team Name: ')
-    t2.school = getSchool(t2.name)
-    t2.color1, t2.color2 = getColor(t2.school)
-
-    print("Home team: {0}\n\tHex Colors: {1}, {2}\n\tRGB colors: {3}, {4}" .format(t1.school,t1.color1,t1.color2,hexToRGB(t1.color1),hexToRGB(t1.color2)))
-    print("Away team: {0}\n\tHex Colors: {1}, {2}\n\tRGB colors: {3}, {4}\n" .format(t2.school,t2.color1,t2.color2,hexToRGB(t2.color1),hexToRGB(t2.color2)))
-
-    t1.roster = getRoster(t1.name)
-
-    t1.roster = changeRoster(t1.name,t1.roster)
-
-    setRoster(t1.side,t1.roster)
-
-
-
-    print('Generating HTML Files...')
-    createHTML(t1.side,t1.color1,t1.color2)
-    createHTML(t2.side,t2.color1,t2.color2)
-    print('HTML files generated\n')
-
-    print('Generating PNG files...')
-    createPNG(t1.side,t1.color1,t1.color2)
-    createPNG(t2.side,t2.color1,t2.color2)
-    print('PNG files generated\n')
+    # t1.name = input('Enter Home (blue team) Team Name: ')
+    # t1.school = getSchool(t1.name)
+    # t1.color1, t1.color2 = getColor(t1.school)
+    #
+    # t2.name = input('Enter Away (orange team) Team Name: ')
+    # t2.school = getSchool(t2.name)
+    # t2.color1, t2.color2 = getColor(t2.school)
+    #
+    # print("Home team: {0}\n\tHex Colors: {1}, {2}\n\tRGB colors: {3}, {4}" .format(t1.school,t1.color1,t1.color2,hexToRGB(t1.color1),hexToRGB(t1.color2)))
+    # print("Away team: {0}\n\tHex Colors: {1}, {2}\n\tRGB colors: {3}, {4}\n" .format(t2.school,t2.color1,t2.color2,hexToRGB(t2.color1),hexToRGB(t2.color2)))
+    #
+    # t1.roster = getRoster(t1.name)
+    #
+    # t1.roster = changeRoster(t1.name,t1.roster)
+    #
+    # setRoster(t1.side,t1.roster)
+    #
+    # print('Generating HTML Files...')
+    # createHTML(t1.side,t1.color1,t1.color2)
+    # createHTML(t2.side,t2.color1,t2.color2)
+    # print('HTML files generated\n')
+    #
+    # print('Generating PNG files...')
+    # createPNG(t1.side,t1.color1,t1.color2)
+    # createPNG(t2.side,t2.color1,t2.color2)
+    # print('PNG files generated\n')
 
     print('\nPress ENTER to exit')
 
