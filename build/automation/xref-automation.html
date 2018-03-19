@@ -13,11 +13,14 @@
 
 <div class="node">
   <a name="automation.py"></a>
-  <a target="code" href="///C:/Users/joste/Documents/Python/cca/automation.py" type="text/plain"><tt>automation.py</tt></a>
+  <a target="code" href="///C:/Users/joste/Documents/Python/CCA/automation.py" type="text/plain"><tt>automation.py</tt></a>
 <span class="moduletype">Script</span>  <div class="import">
 imports:
     <a href="#'java.lang'">'java.lang'</a>
  &#8226;   <a href="#'org.python'">'org.python'</a>
+ &#8226;   <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.ImageDraw">PIL.ImageDraw</a>
  &#8226;   <a href="#__future__">__future__</a>
  &#8226;   <a href="#_ast">_ast</a>
  &#8226;   <a href="#_bisect">_bisect</a>
@@ -448,6 +451,50 @@ imported by:
 </div>
 
 <div class="node">
+  <a name="'PyQt4.QtCore'"></a>
+  <a target="code" href="" type="text/plain"><tt>'PyQt4.QtCore'</tt></a>
+<span class="moduletype">MissingModule</span>  <div class="import">
+imported by:
+    <a href="#PIL.ImageQt">PIL.ImageQt</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="'PyQt4.QtGui'"></a>
+  <a target="code" href="" type="text/plain"><tt>'PyQt4.QtGui'</tt></a>
+<span class="moduletype">MissingModule</span>  <div class="import">
+imported by:
+    <a href="#PIL.ImageQt">PIL.ImageQt</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="'PyQt5.QtCore'"></a>
+  <a target="code" href="" type="text/plain"><tt>'PyQt5.QtCore'</tt></a>
+<span class="moduletype">MissingModule</span>  <div class="import">
+imported by:
+    <a href="#PIL.ImageQt">PIL.ImageQt</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="'PySide.QtCore'"></a>
+  <a target="code" href="" type="text/plain"><tt>'PySide.QtCore'</tt></a>
+<span class="moduletype">MissingModule</span>  <div class="import">
+imported by:
+    <a href="#PIL.ImageQt">PIL.ImageQt</a>
+
+  </div>
+
+</div>
+
+<div class="node">
   <a name="'backports.ssl_match_hostname'"></a>
   <a target="code" href="" type="text/plain"><tt>'backports.ssl_match_hostname'</tt></a>
 <span class="moduletype">MissingModule</span>  <div class="import">
@@ -761,7 +808,7 @@ imported by:
 <span class="moduletype">MissingModule</span>  <div class="import">
 imported by:
     <a href="#automation.py">automation.py</a>
- &#8226;   <a href="#copy">copy</a>
+ &#8226;   <a href="#pickle">pickle</a>
  &#8226;   <a href="#setuptools.sandbox">setuptools.sandbox</a>
  &#8226;   <a href="#xml.sax">xml.sax</a>
 
@@ -986,6 +1033,1846 @@ imported by:
 </div>
 
 <div class="node">
+  <a name="PIL"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/__init__.py" type="text/plain"><tt>PIL</tt></a>
+<span class="moduletype">Package</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.BmpImagePlugin">PIL.BmpImagePlugin</a>
+ &#8226;   <a href="#PIL.GifImagePlugin">PIL.GifImagePlugin</a>
+ &#8226;   <a href="#PIL.GimpGradientFile">PIL.GimpGradientFile</a>
+ &#8226;   <a href="#PIL.GimpPaletteFile">PIL.GimpPaletteFile</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.ImageChops">PIL.ImageChops</a>
+ &#8226;   <a href="#PIL.ImageColor">PIL.ImageColor</a>
+ &#8226;   <a href="#PIL.ImageDraw">PIL.ImageDraw</a>
+ &#8226;   <a href="#PIL.ImageDraw2">PIL.ImageDraw2</a>
+ &#8226;   <a href="#PIL.ImageFile">PIL.ImageFile</a>
+ &#8226;   <a href="#PIL.ImageFilter">PIL.ImageFilter</a>
+ &#8226;   <a href="#PIL.ImageFont">PIL.ImageFont</a>
+ &#8226;   <a href="#PIL.ImageMode">PIL.ImageMode</a>
+ &#8226;   <a href="#PIL.ImagePalette">PIL.ImagePalette</a>
+ &#8226;   <a href="#PIL.ImagePath">PIL.ImagePath</a>
+ &#8226;   <a href="#PIL.ImageQt">PIL.ImageQt</a>
+ &#8226;   <a href="#PIL.ImageSequence">PIL.ImageSequence</a>
+ &#8226;   <a href="#PIL.ImageShow">PIL.ImageShow</a>
+ &#8226;   <a href="#PIL.ImageTk">PIL.ImageTk</a>
+ &#8226;   <a href="#PIL.JpegImagePlugin">PIL.JpegImagePlugin</a>
+ &#8226;   <a href="#PIL.PaletteFile">PIL.PaletteFile</a>
+ &#8226;   <a href="#PIL.PngImagePlugin">PIL.PngImagePlugin</a>
+ &#8226;   <a href="#PIL.PpmImagePlugin">PIL.PpmImagePlugin</a>
+ &#8226;   <a href="#PIL.PyAccess">PIL.PyAccess</a>
+ &#8226;   <a href="#PIL.TiffImagePlugin">PIL.TiffImagePlugin</a>
+ &#8226;   <a href="#PIL.TiffTags">PIL.TiffTags</a>
+ &#8226;   <a href="#PIL._imaging">PIL._imaging</a>
+ &#8226;   <a href="#PIL._imagingagg">PIL._imagingagg</a>
+ &#8226;   <a href="#PIL._imagingft">PIL._imagingft</a>
+ &#8226;   <a href="#PIL._imagingtk">PIL._imagingtk</a>
+ &#8226;   <a href="#PIL._webp">PIL._webp</a>
+ &#8226;   <a href="#PIL.version">PIL.version</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.BmpImagePlugin">PIL.BmpImagePlugin</a>
+ &#8226;   <a href="#PIL.BufrStubImagePlugin">PIL.BufrStubImagePlugin</a>
+ &#8226;   <a href="#PIL.CurImagePlugin">PIL.CurImagePlugin</a>
+ &#8226;   <a href="#PIL.DcxImagePlugin">PIL.DcxImagePlugin</a>
+ &#8226;   <a href="#PIL.DdsImagePlugin">PIL.DdsImagePlugin</a>
+ &#8226;   <a href="#PIL.EpsImagePlugin">PIL.EpsImagePlugin</a>
+ &#8226;   <a href="#PIL.FitsStubImagePlugin">PIL.FitsStubImagePlugin</a>
+ &#8226;   <a href="#PIL.FliImagePlugin">PIL.FliImagePlugin</a>
+ &#8226;   <a href="#PIL.FpxImagePlugin">PIL.FpxImagePlugin</a>
+ &#8226;   <a href="#PIL.FtexImagePlugin">PIL.FtexImagePlugin</a>
+ &#8226;   <a href="#PIL.GbrImagePlugin">PIL.GbrImagePlugin</a>
+ &#8226;   <a href="#PIL.GifImagePlugin">PIL.GifImagePlugin</a>
+ &#8226;   <a href="#PIL.GimpGradientFile">PIL.GimpGradientFile</a>
+ &#8226;   <a href="#PIL.GimpPaletteFile">PIL.GimpPaletteFile</a>
+ &#8226;   <a href="#PIL.GribStubImagePlugin">PIL.GribStubImagePlugin</a>
+ &#8226;   <a href="#PIL.Hdf5StubImagePlugin">PIL.Hdf5StubImagePlugin</a>
+ &#8226;   <a href="#PIL.IcnsImagePlugin">PIL.IcnsImagePlugin</a>
+ &#8226;   <a href="#PIL.IcoImagePlugin">PIL.IcoImagePlugin</a>
+ &#8226;   <a href="#PIL.ImImagePlugin">PIL.ImImagePlugin</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.ImageChops">PIL.ImageChops</a>
+ &#8226;   <a href="#PIL.ImageColor">PIL.ImageColor</a>
+ &#8226;   <a href="#PIL.ImageDraw">PIL.ImageDraw</a>
+ &#8226;   <a href="#PIL.ImageDraw2">PIL.ImageDraw2</a>
+ &#8226;   <a href="#PIL.ImageFile">PIL.ImageFile</a>
+ &#8226;   <a href="#PIL.ImageFilter">PIL.ImageFilter</a>
+ &#8226;   <a href="#PIL.ImageFont">PIL.ImageFont</a>
+ &#8226;   <a href="#PIL.ImageMode">PIL.ImageMode</a>
+ &#8226;   <a href="#PIL.ImagePalette">PIL.ImagePalette</a>
+ &#8226;   <a href="#PIL.ImagePath">PIL.ImagePath</a>
+ &#8226;   <a href="#PIL.ImageQt">PIL.ImageQt</a>
+ &#8226;   <a href="#PIL.ImageSequence">PIL.ImageSequence</a>
+ &#8226;   <a href="#PIL.ImageShow">PIL.ImageShow</a>
+ &#8226;   <a href="#PIL.ImageTk">PIL.ImageTk</a>
+ &#8226;   <a href="#PIL.ImtImagePlugin">PIL.ImtImagePlugin</a>
+ &#8226;   <a href="#PIL.IptcImagePlugin">PIL.IptcImagePlugin</a>
+ &#8226;   <a href="#PIL.Jpeg2KImagePlugin">PIL.Jpeg2KImagePlugin</a>
+ &#8226;   <a href="#PIL.JpegImagePlugin">PIL.JpegImagePlugin</a>
+ &#8226;   <a href="#PIL.JpegPresets">PIL.JpegPresets</a>
+ &#8226;   <a href="#PIL.McIdasImagePlugin">PIL.McIdasImagePlugin</a>
+ &#8226;   <a href="#PIL.MicImagePlugin">PIL.MicImagePlugin</a>
+ &#8226;   <a href="#PIL.MpegImagePlugin">PIL.MpegImagePlugin</a>
+ &#8226;   <a href="#PIL.MpoImagePlugin">PIL.MpoImagePlugin</a>
+ &#8226;   <a href="#PIL.MspImagePlugin">PIL.MspImagePlugin</a>
+ &#8226;   <a href="#PIL.PaletteFile">PIL.PaletteFile</a>
+ &#8226;   <a href="#PIL.PalmImagePlugin">PIL.PalmImagePlugin</a>
+ &#8226;   <a href="#PIL.PcdImagePlugin">PIL.PcdImagePlugin</a>
+ &#8226;   <a href="#PIL.PcxImagePlugin">PIL.PcxImagePlugin</a>
+ &#8226;   <a href="#PIL.PdfImagePlugin">PIL.PdfImagePlugin</a>
+ &#8226;   <a href="#PIL.PixarImagePlugin">PIL.PixarImagePlugin</a>
+ &#8226;   <a href="#PIL.PngImagePlugin">PIL.PngImagePlugin</a>
+ &#8226;   <a href="#PIL.PpmImagePlugin">PIL.PpmImagePlugin</a>
+ &#8226;   <a href="#PIL.PsdImagePlugin">PIL.PsdImagePlugin</a>
+ &#8226;   <a href="#PIL.PyAccess">PIL.PyAccess</a>
+ &#8226;   <a href="#PIL.SgiImagePlugin">PIL.SgiImagePlugin</a>
+ &#8226;   <a href="#PIL.SpiderImagePlugin">PIL.SpiderImagePlugin</a>
+ &#8226;   <a href="#PIL.SunImagePlugin">PIL.SunImagePlugin</a>
+ &#8226;   <a href="#PIL.TgaImagePlugin">PIL.TgaImagePlugin</a>
+ &#8226;   <a href="#PIL.TiffImagePlugin">PIL.TiffImagePlugin</a>
+ &#8226;   <a href="#PIL.TiffTags">PIL.TiffTags</a>
+ &#8226;   <a href="#PIL.WebPImagePlugin">PIL.WebPImagePlugin</a>
+ &#8226;   <a href="#PIL.WmfImagePlugin">PIL.WmfImagePlugin</a>
+ &#8226;   <a href="#PIL.XVThumbImagePlugin">PIL.XVThumbImagePlugin</a>
+ &#8226;   <a href="#PIL.XbmImagePlugin">PIL.XbmImagePlugin</a>
+ &#8226;   <a href="#PIL.XpmImagePlugin">PIL.XpmImagePlugin</a>
+ &#8226;   <a href="#PIL._binary">PIL._binary</a>
+ &#8226;   <a href="#PIL._imaging">PIL._imaging</a>
+ &#8226;   <a href="#PIL._imagingft">PIL._imagingft</a>
+ &#8226;   <a href="#PIL._imagingtk">PIL._imagingtk</a>
+ &#8226;   <a href="#PIL._util">PIL._util</a>
+ &#8226;   <a href="#PIL._webp">PIL._webp</a>
+ &#8226;   <a href="#PIL.version">PIL.version</a>
+ &#8226;   <a href="#automation.py">automation.py</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.BmpImagePlugin"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/BmpImagePlugin.py" type="text/plain"><tt>PIL.BmpImagePlugin</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.ImageFile">PIL.ImageFile</a>
+ &#8226;   <a href="#PIL.ImagePalette">PIL.ImagePalette</a>
+ &#8226;   <a href="#PIL._binary">PIL._binary</a>
+ &#8226;   <a href="#math">math</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.CurImagePlugin">PIL.CurImagePlugin</a>
+ &#8226;   <a href="#PIL.IcoImagePlugin">PIL.IcoImagePlugin</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.BufrStubImagePlugin"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/BufrStubImagePlugin.py" type="text/plain"><tt>PIL.BufrStubImagePlugin</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.ImageFile">PIL.ImageFile</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL.Image">PIL.Image</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.CurImagePlugin"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/CurImagePlugin.py" type="text/plain"><tt>PIL.CurImagePlugin</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.BmpImagePlugin">PIL.BmpImagePlugin</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL._binary">PIL._binary</a>
+ &#8226;   <a href="#__future__">__future__</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL.Image">PIL.Image</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.DcxImagePlugin"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/DcxImagePlugin.py" type="text/plain"><tt>PIL.DcxImagePlugin</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.PcxImagePlugin">PIL.PcxImagePlugin</a>
+ &#8226;   <a href="#PIL._binary">PIL._binary</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL.Image">PIL.Image</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.DdsImagePlugin"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/DdsImagePlugin.py" type="text/plain"><tt>PIL.DdsImagePlugin</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.ImageFile">PIL.ImageFile</a>
+ &#8226;   <a href="#io">io</a>
+ &#8226;   <a href="#struct">struct</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL.Image">PIL.Image</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.EpsImagePlugin"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/EpsImagePlugin.py" type="text/plain"><tt>PIL.EpsImagePlugin</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.ImageFile">PIL.ImageFile</a>
+ &#8226;   <a href="#PIL._binary">PIL._binary</a>
+ &#8226;   <a href="#distutils.spawn">distutils.spawn</a>
+ &#8226;   <a href="#io">io</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#re">re</a>
+ &#8226;   <a href="#shutil">shutil</a>
+ &#8226;   <a href="#subprocess">subprocess</a>
+ &#8226;   <a href="#sys">sys</a>
+ &#8226;   <a href="#tempfile">tempfile</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL.Image">PIL.Image</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.FitsStubImagePlugin"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/FitsStubImagePlugin.py" type="text/plain"><tt>PIL.FitsStubImagePlugin</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.ImageFile">PIL.ImageFile</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL.Image">PIL.Image</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.FliImagePlugin"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/FliImagePlugin.py" type="text/plain"><tt>PIL.FliImagePlugin</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.ImageFile">PIL.ImageFile</a>
+ &#8226;   <a href="#PIL.ImagePalette">PIL.ImagePalette</a>
+ &#8226;   <a href="#PIL._binary">PIL._binary</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL.Image">PIL.Image</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.FpxImagePlugin"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/FpxImagePlugin.py" type="text/plain"><tt>PIL.FpxImagePlugin</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.ImageFile">PIL.ImageFile</a>
+ &#8226;   <a href="#PIL._binary">PIL._binary</a>
+ &#8226;   <a href="#__future__">__future__</a>
+ &#8226;   <a href="#olefile">olefile</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL.Image">PIL.Image</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.FtexImagePlugin"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/FtexImagePlugin.py" type="text/plain"><tt>PIL.FtexImagePlugin</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.ImageFile">PIL.ImageFile</a>
+ &#8226;   <a href="#io">io</a>
+ &#8226;   <a href="#struct">struct</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL.Image">PIL.Image</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.GbrImagePlugin"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/GbrImagePlugin.py" type="text/plain"><tt>PIL.GbrImagePlugin</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.ImageFile">PIL.ImageFile</a>
+ &#8226;   <a href="#PIL._binary">PIL._binary</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL.Image">PIL.Image</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.GifImagePlugin"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/GifImagePlugin.py" type="text/plain"><tt>PIL.GifImagePlugin</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.ImageChops">PIL.ImageChops</a>
+ &#8226;   <a href="#PIL.ImageFile">PIL.ImageFile</a>
+ &#8226;   <a href="#PIL.ImagePalette">PIL.ImagePalette</a>
+ &#8226;   <a href="#PIL.ImageSequence">PIL.ImageSequence</a>
+ &#8226;   <a href="#PIL._binary">PIL._binary</a>
+ &#8226;   <a href="#copy">copy</a>
+ &#8226;   <a href="#itertools">itertools</a>
+ &#8226;   <a href="#math">math</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#subprocess">subprocess</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.GimpGradientFile"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/GimpGradientFile.py" type="text/plain"><tt>PIL.GimpGradientFile</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL._binary">PIL._binary</a>
+ &#8226;   <a href="#math">math</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.ImagePalette">PIL.ImagePalette</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.GimpPaletteFile"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/GimpPaletteFile.py" type="text/plain"><tt>PIL.GimpPaletteFile</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL._binary">PIL._binary</a>
+ &#8226;   <a href="#re">re</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.ImagePalette">PIL.ImagePalette</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.GribStubImagePlugin"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/GribStubImagePlugin.py" type="text/plain"><tt>PIL.GribStubImagePlugin</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.ImageFile">PIL.ImageFile</a>
+ &#8226;   <a href="#PIL._binary">PIL._binary</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL.Image">PIL.Image</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.Hdf5StubImagePlugin"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/Hdf5StubImagePlugin.py" type="text/plain"><tt>PIL.Hdf5StubImagePlugin</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.ImageFile">PIL.ImageFile</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL.Image">PIL.Image</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.IcnsImagePlugin"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/IcnsImagePlugin.py" type="text/plain"><tt>PIL.IcnsImagePlugin</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.ImageFile">PIL.ImageFile</a>
+ &#8226;   <a href="#PIL.Jpeg2KImagePlugin">PIL.Jpeg2KImagePlugin</a>
+ &#8226;   <a href="#PIL.PngImagePlugin">PIL.PngImagePlugin</a>
+ &#8226;   <a href="#PIL._binary">PIL._binary</a>
+ &#8226;   <a href="#io">io</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#shutil">shutil</a>
+ &#8226;   <a href="#struct">struct</a>
+ &#8226;   <a href="#subprocess">subprocess</a>
+ &#8226;   <a href="#sys">sys</a>
+ &#8226;   <a href="#tempfile">tempfile</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL.Image">PIL.Image</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.IcoImagePlugin"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/IcoImagePlugin.py" type="text/plain"><tt>PIL.IcoImagePlugin</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.BmpImagePlugin">PIL.BmpImagePlugin</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.ImageFile">PIL.ImageFile</a>
+ &#8226;   <a href="#PIL.PngImagePlugin">PIL.PngImagePlugin</a>
+ &#8226;   <a href="#PIL._binary">PIL._binary</a>
+ &#8226;   <a href="#io">io</a>
+ &#8226;   <a href="#math">math</a>
+ &#8226;   <a href="#struct">struct</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL.Image">PIL.Image</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.ImImagePlugin"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/ImImagePlugin.py" type="text/plain"><tt>PIL.ImImagePlugin</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.ImageFile">PIL.ImageFile</a>
+ &#8226;   <a href="#PIL.ImagePalette">PIL.ImagePalette</a>
+ &#8226;   <a href="#PIL._binary">PIL._binary</a>
+ &#8226;   <a href="#re">re</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL.Image">PIL.Image</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.Image"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/Image.py" type="text/plain"><tt>PIL.Image</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.BmpImagePlugin">PIL.BmpImagePlugin</a>
+ &#8226;   <a href="#PIL.BufrStubImagePlugin">PIL.BufrStubImagePlugin</a>
+ &#8226;   <a href="#PIL.CurImagePlugin">PIL.CurImagePlugin</a>
+ &#8226;   <a href="#PIL.DcxImagePlugin">PIL.DcxImagePlugin</a>
+ &#8226;   <a href="#PIL.DdsImagePlugin">PIL.DdsImagePlugin</a>
+ &#8226;   <a href="#PIL.EpsImagePlugin">PIL.EpsImagePlugin</a>
+ &#8226;   <a href="#PIL.FitsStubImagePlugin">PIL.FitsStubImagePlugin</a>
+ &#8226;   <a href="#PIL.FliImagePlugin">PIL.FliImagePlugin</a>
+ &#8226;   <a href="#PIL.FpxImagePlugin">PIL.FpxImagePlugin</a>
+ &#8226;   <a href="#PIL.FtexImagePlugin">PIL.FtexImagePlugin</a>
+ &#8226;   <a href="#PIL.GbrImagePlugin">PIL.GbrImagePlugin</a>
+ &#8226;   <a href="#PIL.GifImagePlugin">PIL.GifImagePlugin</a>
+ &#8226;   <a href="#PIL.GribStubImagePlugin">PIL.GribStubImagePlugin</a>
+ &#8226;   <a href="#PIL.Hdf5StubImagePlugin">PIL.Hdf5StubImagePlugin</a>
+ &#8226;   <a href="#PIL.IcnsImagePlugin">PIL.IcnsImagePlugin</a>
+ &#8226;   <a href="#PIL.IcoImagePlugin">PIL.IcoImagePlugin</a>
+ &#8226;   <a href="#PIL.ImImagePlugin">PIL.ImImagePlugin</a>
+ &#8226;   <a href="#PIL.ImageColor">PIL.ImageColor</a>
+ &#8226;   <a href="#PIL.ImageFilter">PIL.ImageFilter</a>
+ &#8226;   <a href="#PIL.ImageMode">PIL.ImageMode</a>
+ &#8226;   <a href="#PIL.ImagePalette">PIL.ImagePalette</a>
+ &#8226;   <a href="#PIL.ImageQt">PIL.ImageQt</a>
+ &#8226;   <a href="#PIL.ImageShow">PIL.ImageShow</a>
+ &#8226;   <a href="#PIL.ImtImagePlugin">PIL.ImtImagePlugin</a>
+ &#8226;   <a href="#PIL.IptcImagePlugin">PIL.IptcImagePlugin</a>
+ &#8226;   <a href="#PIL.Jpeg2KImagePlugin">PIL.Jpeg2KImagePlugin</a>
+ &#8226;   <a href="#PIL.JpegImagePlugin">PIL.JpegImagePlugin</a>
+ &#8226;   <a href="#PIL.McIdasImagePlugin">PIL.McIdasImagePlugin</a>
+ &#8226;   <a href="#PIL.MicImagePlugin">PIL.MicImagePlugin</a>
+ &#8226;   <a href="#PIL.MpegImagePlugin">PIL.MpegImagePlugin</a>
+ &#8226;   <a href="#PIL.MpoImagePlugin">PIL.MpoImagePlugin</a>
+ &#8226;   <a href="#PIL.MspImagePlugin">PIL.MspImagePlugin</a>
+ &#8226;   <a href="#PIL.PalmImagePlugin">PIL.PalmImagePlugin</a>
+ &#8226;   <a href="#PIL.PcdImagePlugin">PIL.PcdImagePlugin</a>
+ &#8226;   <a href="#PIL.PcxImagePlugin">PIL.PcxImagePlugin</a>
+ &#8226;   <a href="#PIL.PdfImagePlugin">PIL.PdfImagePlugin</a>
+ &#8226;   <a href="#PIL.PixarImagePlugin">PIL.PixarImagePlugin</a>
+ &#8226;   <a href="#PIL.PngImagePlugin">PIL.PngImagePlugin</a>
+ &#8226;   <a href="#PIL.PpmImagePlugin">PIL.PpmImagePlugin</a>
+ &#8226;   <a href="#PIL.PsdImagePlugin">PIL.PsdImagePlugin</a>
+ &#8226;   <a href="#PIL.PyAccess">PIL.PyAccess</a>
+ &#8226;   <a href="#PIL.SgiImagePlugin">PIL.SgiImagePlugin</a>
+ &#8226;   <a href="#PIL.SpiderImagePlugin">PIL.SpiderImagePlugin</a>
+ &#8226;   <a href="#PIL.SunImagePlugin">PIL.SunImagePlugin</a>
+ &#8226;   <a href="#PIL.TgaImagePlugin">PIL.TgaImagePlugin</a>
+ &#8226;   <a href="#PIL.TiffImagePlugin">PIL.TiffImagePlugin</a>
+ &#8226;   <a href="#PIL.WebPImagePlugin">PIL.WebPImagePlugin</a>
+ &#8226;   <a href="#PIL.WmfImagePlugin">PIL.WmfImagePlugin</a>
+ &#8226;   <a href="#PIL.XVThumbImagePlugin">PIL.XVThumbImagePlugin</a>
+ &#8226;   <a href="#PIL.XbmImagePlugin">PIL.XbmImagePlugin</a>
+ &#8226;   <a href="#PIL.XpmImagePlugin">PIL.XpmImagePlugin</a>
+ &#8226;   <a href="#PIL._binary">PIL._binary</a>
+ &#8226;   <a href="#PIL._imaging">PIL._imaging</a>
+ &#8226;   <a href="#PIL._util">PIL._util</a>
+ &#8226;   <a href="#__builtin__">__builtin__</a>
+ &#8226;   <a href="#atexit">atexit</a>
+ &#8226;   <a href="#builtins">builtins</a>
+ &#8226;   <a href="#cffi">cffi</a>
+ &#8226;   <a href="#collections">collections</a>
+ &#8226;   <a href="#io">io</a>
+ &#8226;   <a href="#logging">logging</a>
+ &#8226;   <a href="#math">math</a>
+ &#8226;   <a href="#numbers">numbers</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#pathlib">pathlib</a>
+ &#8226;   <a href="#pathlib2">pathlib2</a>
+ &#8226;   <a href="#struct">struct</a>
+ &#8226;   <a href="#sys">sys</a>
+ &#8226;   <a href="#tempfile">tempfile</a>
+ &#8226;   <a href="#warnings">warnings</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.BmpImagePlugin">PIL.BmpImagePlugin</a>
+ &#8226;   <a href="#PIL.BufrStubImagePlugin">PIL.BufrStubImagePlugin</a>
+ &#8226;   <a href="#PIL.CurImagePlugin">PIL.CurImagePlugin</a>
+ &#8226;   <a href="#PIL.DcxImagePlugin">PIL.DcxImagePlugin</a>
+ &#8226;   <a href="#PIL.DdsImagePlugin">PIL.DdsImagePlugin</a>
+ &#8226;   <a href="#PIL.EpsImagePlugin">PIL.EpsImagePlugin</a>
+ &#8226;   <a href="#PIL.FitsStubImagePlugin">PIL.FitsStubImagePlugin</a>
+ &#8226;   <a href="#PIL.FliImagePlugin">PIL.FliImagePlugin</a>
+ &#8226;   <a href="#PIL.FpxImagePlugin">PIL.FpxImagePlugin</a>
+ &#8226;   <a href="#PIL.FtexImagePlugin">PIL.FtexImagePlugin</a>
+ &#8226;   <a href="#PIL.GbrImagePlugin">PIL.GbrImagePlugin</a>
+ &#8226;   <a href="#PIL.GifImagePlugin">PIL.GifImagePlugin</a>
+ &#8226;   <a href="#PIL.GribStubImagePlugin">PIL.GribStubImagePlugin</a>
+ &#8226;   <a href="#PIL.Hdf5StubImagePlugin">PIL.Hdf5StubImagePlugin</a>
+ &#8226;   <a href="#PIL.IcnsImagePlugin">PIL.IcnsImagePlugin</a>
+ &#8226;   <a href="#PIL.IcoImagePlugin">PIL.IcoImagePlugin</a>
+ &#8226;   <a href="#PIL.ImImagePlugin">PIL.ImImagePlugin</a>
+ &#8226;   <a href="#PIL.ImageChops">PIL.ImageChops</a>
+ &#8226;   <a href="#PIL.ImageColor">PIL.ImageColor</a>
+ &#8226;   <a href="#PIL.ImageDraw">PIL.ImageDraw</a>
+ &#8226;   <a href="#PIL.ImageDraw2">PIL.ImageDraw2</a>
+ &#8226;   <a href="#PIL.ImageFile">PIL.ImageFile</a>
+ &#8226;   <a href="#PIL.ImageFont">PIL.ImageFont</a>
+ &#8226;   <a href="#PIL.ImageMode">PIL.ImageMode</a>
+ &#8226;   <a href="#PIL.ImagePath">PIL.ImagePath</a>
+ &#8226;   <a href="#PIL.ImageQt">PIL.ImageQt</a>
+ &#8226;   <a href="#PIL.ImageShow">PIL.ImageShow</a>
+ &#8226;   <a href="#PIL.ImageTk">PIL.ImageTk</a>
+ &#8226;   <a href="#PIL.ImtImagePlugin">PIL.ImtImagePlugin</a>
+ &#8226;   <a href="#PIL.IptcImagePlugin">PIL.IptcImagePlugin</a>
+ &#8226;   <a href="#PIL.Jpeg2KImagePlugin">PIL.Jpeg2KImagePlugin</a>
+ &#8226;   <a href="#PIL.JpegImagePlugin">PIL.JpegImagePlugin</a>
+ &#8226;   <a href="#PIL.McIdasImagePlugin">PIL.McIdasImagePlugin</a>
+ &#8226;   <a href="#PIL.MicImagePlugin">PIL.MicImagePlugin</a>
+ &#8226;   <a href="#PIL.MpegImagePlugin">PIL.MpegImagePlugin</a>
+ &#8226;   <a href="#PIL.MpoImagePlugin">PIL.MpoImagePlugin</a>
+ &#8226;   <a href="#PIL.MspImagePlugin">PIL.MspImagePlugin</a>
+ &#8226;   <a href="#PIL.PalmImagePlugin">PIL.PalmImagePlugin</a>
+ &#8226;   <a href="#PIL.PcdImagePlugin">PIL.PcdImagePlugin</a>
+ &#8226;   <a href="#PIL.PcxImagePlugin">PIL.PcxImagePlugin</a>
+ &#8226;   <a href="#PIL.PdfImagePlugin">PIL.PdfImagePlugin</a>
+ &#8226;   <a href="#PIL.PixarImagePlugin">PIL.PixarImagePlugin</a>
+ &#8226;   <a href="#PIL.PngImagePlugin">PIL.PngImagePlugin</a>
+ &#8226;   <a href="#PIL.PpmImagePlugin">PIL.PpmImagePlugin</a>
+ &#8226;   <a href="#PIL.PsdImagePlugin">PIL.PsdImagePlugin</a>
+ &#8226;   <a href="#PIL.SgiImagePlugin">PIL.SgiImagePlugin</a>
+ &#8226;   <a href="#PIL.SpiderImagePlugin">PIL.SpiderImagePlugin</a>
+ &#8226;   <a href="#PIL.SunImagePlugin">PIL.SunImagePlugin</a>
+ &#8226;   <a href="#PIL.TgaImagePlugin">PIL.TgaImagePlugin</a>
+ &#8226;   <a href="#PIL.TiffImagePlugin">PIL.TiffImagePlugin</a>
+ &#8226;   <a href="#PIL.WebPImagePlugin">PIL.WebPImagePlugin</a>
+ &#8226;   <a href="#PIL.WmfImagePlugin">PIL.WmfImagePlugin</a>
+ &#8226;   <a href="#PIL.XVThumbImagePlugin">PIL.XVThumbImagePlugin</a>
+ &#8226;   <a href="#PIL.XbmImagePlugin">PIL.XbmImagePlugin</a>
+ &#8226;   <a href="#PIL.XpmImagePlugin">PIL.XpmImagePlugin</a>
+ &#8226;   <a href="#automation.py">automation.py</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.ImageChops"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/ImageChops.py" type="text/plain"><tt>PIL.ImageChops</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.GifImagePlugin">PIL.GifImagePlugin</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.ImageColor"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/ImageColor.py" type="text/plain"><tt>PIL.ImageColor</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#colorsys">colorsys</a>
+ &#8226;   <a href="#re">re</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.ImageDraw">PIL.ImageDraw</a>
+ &#8226;   <a href="#PIL.ImageDraw2">PIL.ImageDraw2</a>
+ &#8226;   <a href="#PIL.ImagePalette">PIL.ImagePalette</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.ImageDraw"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/ImageDraw.py" type="text/plain"><tt>PIL.ImageDraw</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.ImageColor">PIL.ImageColor</a>
+ &#8226;   <a href="#PIL.ImageDraw2">PIL.ImageDraw2</a>
+ &#8226;   <a href="#PIL.ImageFont">PIL.ImageFont</a>
+ &#8226;   <a href="#PIL._imagingagg">PIL._imagingagg</a>
+ &#8226;   <a href="#PIL._util">PIL._util</a>
+ &#8226;   <a href="#numbers">numbers</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.ImageDraw2">PIL.ImageDraw2</a>
+ &#8226;   <a href="#automation.py">automation.py</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.ImageDraw2"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/ImageDraw2.py" type="text/plain"><tt>PIL.ImageDraw2</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.ImageColor">PIL.ImageColor</a>
+ &#8226;   <a href="#PIL.ImageDraw">PIL.ImageDraw</a>
+ &#8226;   <a href="#PIL.ImageFont">PIL.ImageFont</a>
+ &#8226;   <a href="#PIL.ImagePath">PIL.ImagePath</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.ImageDraw">PIL.ImageDraw</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.ImageFile"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/ImageFile.py" type="text/plain"><tt>PIL.ImageFile</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL._util">PIL._util</a>
+ &#8226;   <a href="#io">io</a>
+ &#8226;   <a href="#mmap">mmap</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#struct">struct</a>
+ &#8226;   <a href="#sys">sys</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.BmpImagePlugin">PIL.BmpImagePlugin</a>
+ &#8226;   <a href="#PIL.BufrStubImagePlugin">PIL.BufrStubImagePlugin</a>
+ &#8226;   <a href="#PIL.DdsImagePlugin">PIL.DdsImagePlugin</a>
+ &#8226;   <a href="#PIL.EpsImagePlugin">PIL.EpsImagePlugin</a>
+ &#8226;   <a href="#PIL.FitsStubImagePlugin">PIL.FitsStubImagePlugin</a>
+ &#8226;   <a href="#PIL.FliImagePlugin">PIL.FliImagePlugin</a>
+ &#8226;   <a href="#PIL.FpxImagePlugin">PIL.FpxImagePlugin</a>
+ &#8226;   <a href="#PIL.FtexImagePlugin">PIL.FtexImagePlugin</a>
+ &#8226;   <a href="#PIL.GbrImagePlugin">PIL.GbrImagePlugin</a>
+ &#8226;   <a href="#PIL.GifImagePlugin">PIL.GifImagePlugin</a>
+ &#8226;   <a href="#PIL.GribStubImagePlugin">PIL.GribStubImagePlugin</a>
+ &#8226;   <a href="#PIL.Hdf5StubImagePlugin">PIL.Hdf5StubImagePlugin</a>
+ &#8226;   <a href="#PIL.IcnsImagePlugin">PIL.IcnsImagePlugin</a>
+ &#8226;   <a href="#PIL.IcoImagePlugin">PIL.IcoImagePlugin</a>
+ &#8226;   <a href="#PIL.ImImagePlugin">PIL.ImImagePlugin</a>
+ &#8226;   <a href="#PIL.ImtImagePlugin">PIL.ImtImagePlugin</a>
+ &#8226;   <a href="#PIL.IptcImagePlugin">PIL.IptcImagePlugin</a>
+ &#8226;   <a href="#PIL.Jpeg2KImagePlugin">PIL.Jpeg2KImagePlugin</a>
+ &#8226;   <a href="#PIL.JpegImagePlugin">PIL.JpegImagePlugin</a>
+ &#8226;   <a href="#PIL.McIdasImagePlugin">PIL.McIdasImagePlugin</a>
+ &#8226;   <a href="#PIL.MpegImagePlugin">PIL.MpegImagePlugin</a>
+ &#8226;   <a href="#PIL.MspImagePlugin">PIL.MspImagePlugin</a>
+ &#8226;   <a href="#PIL.PalmImagePlugin">PIL.PalmImagePlugin</a>
+ &#8226;   <a href="#PIL.PcdImagePlugin">PIL.PcdImagePlugin</a>
+ &#8226;   <a href="#PIL.PcxImagePlugin">PIL.PcxImagePlugin</a>
+ &#8226;   <a href="#PIL.PdfImagePlugin">PIL.PdfImagePlugin</a>
+ &#8226;   <a href="#PIL.PixarImagePlugin">PIL.PixarImagePlugin</a>
+ &#8226;   <a href="#PIL.PngImagePlugin">PIL.PngImagePlugin</a>
+ &#8226;   <a href="#PIL.PpmImagePlugin">PIL.PpmImagePlugin</a>
+ &#8226;   <a href="#PIL.PsdImagePlugin">PIL.PsdImagePlugin</a>
+ &#8226;   <a href="#PIL.SgiImagePlugin">PIL.SgiImagePlugin</a>
+ &#8226;   <a href="#PIL.SpiderImagePlugin">PIL.SpiderImagePlugin</a>
+ &#8226;   <a href="#PIL.SunImagePlugin">PIL.SunImagePlugin</a>
+ &#8226;   <a href="#PIL.TgaImagePlugin">PIL.TgaImagePlugin</a>
+ &#8226;   <a href="#PIL.TiffImagePlugin">PIL.TiffImagePlugin</a>
+ &#8226;   <a href="#PIL.WebPImagePlugin">PIL.WebPImagePlugin</a>
+ &#8226;   <a href="#PIL.WmfImagePlugin">PIL.WmfImagePlugin</a>
+ &#8226;   <a href="#PIL.XVThumbImagePlugin">PIL.XVThumbImagePlugin</a>
+ &#8226;   <a href="#PIL.XbmImagePlugin">PIL.XbmImagePlugin</a>
+ &#8226;   <a href="#PIL.XpmImagePlugin">PIL.XpmImagePlugin</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.ImageFilter"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/ImageFilter.py" type="text/plain"><tt>PIL.ImageFilter</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#functools">functools</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.ImageFont"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/ImageFont.py" type="text/plain"><tt>PIL.ImageFont</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL._imagingft">PIL._imagingft</a>
+ &#8226;   <a href="#PIL._util">PIL._util</a>
+ &#8226;   <a href="#base64">base64</a>
+ &#8226;   <a href="#io">io</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#sys">sys</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.ImageDraw">PIL.ImageDraw</a>
+ &#8226;   <a href="#PIL.ImageDraw2">PIL.ImageDraw2</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.ImageMode"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/ImageMode.py" type="text/plain"><tt>PIL.ImageMode</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.ImagePalette"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/ImagePalette.py" type="text/plain"><tt>PIL.ImagePalette</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.GimpGradientFile">PIL.GimpGradientFile</a>
+ &#8226;   <a href="#PIL.GimpPaletteFile">PIL.GimpPaletteFile</a>
+ &#8226;   <a href="#PIL.ImageColor">PIL.ImageColor</a>
+ &#8226;   <a href="#PIL.PaletteFile">PIL.PaletteFile</a>
+ &#8226;   <a href="#array">array</a>
+ &#8226;   <a href="#random">random</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.BmpImagePlugin">PIL.BmpImagePlugin</a>
+ &#8226;   <a href="#PIL.FliImagePlugin">PIL.FliImagePlugin</a>
+ &#8226;   <a href="#PIL.GifImagePlugin">PIL.GifImagePlugin</a>
+ &#8226;   <a href="#PIL.ImImagePlugin">PIL.ImImagePlugin</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.PcxImagePlugin">PIL.PcxImagePlugin</a>
+ &#8226;   <a href="#PIL.PngImagePlugin">PIL.PngImagePlugin</a>
+ &#8226;   <a href="#PIL.PsdImagePlugin">PIL.PsdImagePlugin</a>
+ &#8226;   <a href="#PIL.SunImagePlugin">PIL.SunImagePlugin</a>
+ &#8226;   <a href="#PIL.TgaImagePlugin">PIL.TgaImagePlugin</a>
+ &#8226;   <a href="#PIL.TiffImagePlugin">PIL.TiffImagePlugin</a>
+ &#8226;   <a href="#PIL.XVThumbImagePlugin">PIL.XVThumbImagePlugin</a>
+ &#8226;   <a href="#PIL.XpmImagePlugin">PIL.XpmImagePlugin</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.ImagePath"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/ImagePath.py" type="text/plain"><tt>PIL.ImagePath</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.ImageDraw2">PIL.ImageDraw2</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.ImageQt"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/ImageQt.py" type="text/plain"><tt>PIL.ImageQt</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#'PyQt4.QtCore'">'PyQt4.QtCore'</a>
+ &#8226;   <a href="#'PyQt4.QtGui'">'PyQt4.QtGui'</a>
+ &#8226;   <a href="#'PyQt5.QtCore'">'PyQt5.QtCore'</a>
+ &#8226;   <a href="#'PySide.QtCore'">'PySide.QtCore'</a>
+ &#8226;   <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL._util">PIL._util</a>
+ &#8226;   <a href="#io">io</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.ImageSequence"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/ImageSequence.py" type="text/plain"><tt>PIL.ImageSequence</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.GifImagePlugin">PIL.GifImagePlugin</a>
+ &#8226;   <a href="#PIL.PdfImagePlugin">PIL.PdfImagePlugin</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.ImageShow"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/ImageShow.py" type="text/plain"><tt>PIL.ImageShow</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#__future__">__future__</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#pipes">pipes</a>
+ &#8226;   <a href="#shlex">shlex</a>
+ &#8226;   <a href="#sys">sys</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.ImageTk"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/ImageTk.py" type="text/plain"><tt>PIL.ImageTk</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL._imagingtk">PIL._imagingtk</a>
+ &#8226;   <a href="#Tkinter">Tkinter</a>
+ &#8226;   <a href="#cffi">cffi</a>
+ &#8226;   <a href="#io">io</a>
+ &#8226;   <a href="#sys">sys</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.SpiderImagePlugin">PIL.SpiderImagePlugin</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.ImtImagePlugin"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/ImtImagePlugin.py" type="text/plain"><tt>PIL.ImtImagePlugin</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.ImageFile">PIL.ImageFile</a>
+ &#8226;   <a href="#re">re</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL.Image">PIL.Image</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.IptcImagePlugin"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/IptcImagePlugin.py" type="text/plain"><tt>PIL.IptcImagePlugin</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.ImageFile">PIL.ImageFile</a>
+ &#8226;   <a href="#PIL.JpegImagePlugin">PIL.JpegImagePlugin</a>
+ &#8226;   <a href="#PIL.TiffImagePlugin">PIL.TiffImagePlugin</a>
+ &#8226;   <a href="#PIL._binary">PIL._binary</a>
+ &#8226;   <a href="#__future__">__future__</a>
+ &#8226;   <a href="#io">io</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#tempfile">tempfile</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL.Image">PIL.Image</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.Jpeg2KImagePlugin"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/Jpeg2KImagePlugin.py" type="text/plain"><tt>PIL.Jpeg2KImagePlugin</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.ImageFile">PIL.ImageFile</a>
+ &#8226;   <a href="#io">io</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#struct">struct</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL.IcnsImagePlugin">PIL.IcnsImagePlugin</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.JpegImagePlugin"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/JpegImagePlugin.py" type="text/plain"><tt>PIL.JpegImagePlugin</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.ImageFile">PIL.ImageFile</a>
+ &#8226;   <a href="#PIL.JpegPresets">PIL.JpegPresets</a>
+ &#8226;   <a href="#PIL.MpoImagePlugin">PIL.MpoImagePlugin</a>
+ &#8226;   <a href="#PIL.TiffImagePlugin">PIL.TiffImagePlugin</a>
+ &#8226;   <a href="#PIL._binary">PIL._binary</a>
+ &#8226;   <a href="#PIL._util">PIL._util</a>
+ &#8226;   <a href="#__future__">__future__</a>
+ &#8226;   <a href="#array">array</a>
+ &#8226;   <a href="#io">io</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#struct">struct</a>
+ &#8226;   <a href="#subprocess">subprocess</a>
+ &#8226;   <a href="#tempfile">tempfile</a>
+ &#8226;   <a href="#warnings">warnings</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.IptcImagePlugin">PIL.IptcImagePlugin</a>
+ &#8226;   <a href="#PIL.MpoImagePlugin">PIL.MpoImagePlugin</a>
+ &#8226;   <a href="#PIL.WebPImagePlugin">PIL.WebPImagePlugin</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.JpegPresets"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/JpegPresets.py" type="text/plain"><tt>PIL.JpegPresets</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL.JpegImagePlugin">PIL.JpegImagePlugin</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.McIdasImagePlugin"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/McIdasImagePlugin.py" type="text/plain"><tt>PIL.McIdasImagePlugin</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.ImageFile">PIL.ImageFile</a>
+ &#8226;   <a href="#struct">struct</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL.Image">PIL.Image</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.MicImagePlugin"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/MicImagePlugin.py" type="text/plain"><tt>PIL.MicImagePlugin</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.TiffImagePlugin">PIL.TiffImagePlugin</a>
+ &#8226;   <a href="#olefile">olefile</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL.Image">PIL.Image</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.MpegImagePlugin"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/MpegImagePlugin.py" type="text/plain"><tt>PIL.MpegImagePlugin</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.ImageFile">PIL.ImageFile</a>
+ &#8226;   <a href="#PIL._binary">PIL._binary</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL.Image">PIL.Image</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.MpoImagePlugin"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/MpoImagePlugin.py" type="text/plain"><tt>PIL.MpoImagePlugin</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.JpegImagePlugin">PIL.JpegImagePlugin</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.JpegImagePlugin">PIL.JpegImagePlugin</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.MspImagePlugin"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/MspImagePlugin.py" type="text/plain"><tt>PIL.MspImagePlugin</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.ImageFile">PIL.ImageFile</a>
+ &#8226;   <a href="#PIL._binary">PIL._binary</a>
+ &#8226;   <a href="#io">io</a>
+ &#8226;   <a href="#struct">struct</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL.Image">PIL.Image</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.PaletteFile"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/PaletteFile.py" type="text/plain"><tt>PIL.PaletteFile</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL._binary">PIL._binary</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.ImagePalette">PIL.ImagePalette</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.PalmImagePlugin"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/PalmImagePlugin.py" type="text/plain"><tt>PIL.PalmImagePlugin</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.ImageFile">PIL.ImageFile</a>
+ &#8226;   <a href="#PIL._binary">PIL._binary</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL.Image">PIL.Image</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.PcdImagePlugin"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/PcdImagePlugin.py" type="text/plain"><tt>PIL.PcdImagePlugin</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.ImageFile">PIL.ImageFile</a>
+ &#8226;   <a href="#PIL._binary">PIL._binary</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL.Image">PIL.Image</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.PcxImagePlugin"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/PcxImagePlugin.py" type="text/plain"><tt>PIL.PcxImagePlugin</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.ImageFile">PIL.ImageFile</a>
+ &#8226;   <a href="#PIL.ImagePalette">PIL.ImagePalette</a>
+ &#8226;   <a href="#PIL._binary">PIL._binary</a>
+ &#8226;   <a href="#logging">logging</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL.DcxImagePlugin">PIL.DcxImagePlugin</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.PdfImagePlugin"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/PdfImagePlugin.py" type="text/plain"><tt>PIL.PdfImagePlugin</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.ImageFile">PIL.ImageFile</a>
+ &#8226;   <a href="#PIL.ImageSequence">PIL.ImageSequence</a>
+ &#8226;   <a href="#PIL._binary">PIL._binary</a>
+ &#8226;   <a href="#io">io</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL.Image">PIL.Image</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.PixarImagePlugin"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/PixarImagePlugin.py" type="text/plain"><tt>PIL.PixarImagePlugin</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.ImageFile">PIL.ImageFile</a>
+ &#8226;   <a href="#PIL._binary">PIL._binary</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL.Image">PIL.Image</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.PngImagePlugin"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/PngImagePlugin.py" type="text/plain"><tt>PIL.PngImagePlugin</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.ImageFile">PIL.ImageFile</a>
+ &#8226;   <a href="#PIL.ImagePalette">PIL.ImagePalette</a>
+ &#8226;   <a href="#PIL._binary">PIL._binary</a>
+ &#8226;   <a href="#logging">logging</a>
+ &#8226;   <a href="#re">re</a>
+ &#8226;   <a href="#struct">struct</a>
+ &#8226;   <a href="#zlib">zlib</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.IcnsImagePlugin">PIL.IcnsImagePlugin</a>
+ &#8226;   <a href="#PIL.IcoImagePlugin">PIL.IcoImagePlugin</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.PpmImagePlugin"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/PpmImagePlugin.py" type="text/plain"><tt>PIL.PpmImagePlugin</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.ImageFile">PIL.ImageFile</a>
+ &#8226;   <a href="#string">string</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.PsdImagePlugin"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/PsdImagePlugin.py" type="text/plain"><tt>PIL.PsdImagePlugin</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.ImageFile">PIL.ImageFile</a>
+ &#8226;   <a href="#PIL.ImagePalette">PIL.ImagePalette</a>
+ &#8226;   <a href="#PIL._binary">PIL._binary</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL.Image">PIL.Image</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.PyAccess"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/PyAccess.py" type="text/plain"><tt>PIL.PyAccess</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#cffi">cffi</a>
+ &#8226;   <a href="#logging">logging</a>
+ &#8226;   <a href="#sys">sys</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.SgiImagePlugin"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/SgiImagePlugin.py" type="text/plain"><tt>PIL.SgiImagePlugin</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.ImageFile">PIL.ImageFile</a>
+ &#8226;   <a href="#PIL._binary">PIL._binary</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#struct">struct</a>
+ &#8226;   <a href="#sys">sys</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL.Image">PIL.Image</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.SpiderImagePlugin"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/SpiderImagePlugin.py" type="text/plain"><tt>PIL.SpiderImagePlugin</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.ImageFile">PIL.ImageFile</a>
+ &#8226;   <a href="#PIL.ImageTk">PIL.ImageTk</a>
+ &#8226;   <a href="#__future__">__future__</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#struct">struct</a>
+ &#8226;   <a href="#sys">sys</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL.Image">PIL.Image</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.SunImagePlugin"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/SunImagePlugin.py" type="text/plain"><tt>PIL.SunImagePlugin</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.ImageFile">PIL.ImageFile</a>
+ &#8226;   <a href="#PIL.ImagePalette">PIL.ImagePalette</a>
+ &#8226;   <a href="#PIL._binary">PIL._binary</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL.Image">PIL.Image</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.TgaImagePlugin"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/TgaImagePlugin.py" type="text/plain"><tt>PIL.TgaImagePlugin</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.ImageFile">PIL.ImageFile</a>
+ &#8226;   <a href="#PIL.ImagePalette">PIL.ImagePalette</a>
+ &#8226;   <a href="#PIL._binary">PIL._binary</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL.Image">PIL.Image</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.TiffImagePlugin"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/TiffImagePlugin.py" type="text/plain"><tt>PIL.TiffImagePlugin</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.ImageFile">PIL.ImageFile</a>
+ &#8226;   <a href="#PIL.ImagePalette">PIL.ImagePalette</a>
+ &#8226;   <a href="#PIL.TiffTags">PIL.TiffTags</a>
+ &#8226;   <a href="#PIL._binary">PIL._binary</a>
+ &#8226;   <a href="#__future__">__future__</a>
+ &#8226;   <a href="#collections">collections</a>
+ &#8226;   <a href="#fractions">fractions</a>
+ &#8226;   <a href="#io">io</a>
+ &#8226;   <a href="#itertools">itertools</a>
+ &#8226;   <a href="#numbers">numbers</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#struct">struct</a>
+ &#8226;   <a href="#sys">sys</a>
+ &#8226;   <a href="#warnings">warnings</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.IptcImagePlugin">PIL.IptcImagePlugin</a>
+ &#8226;   <a href="#PIL.JpegImagePlugin">PIL.JpegImagePlugin</a>
+ &#8226;   <a href="#PIL.MicImagePlugin">PIL.MicImagePlugin</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.TiffTags"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/TiffTags.py" type="text/plain"><tt>PIL.TiffTags</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#collections">collections</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.TiffImagePlugin">PIL.TiffImagePlugin</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.WebPImagePlugin"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/WebPImagePlugin.py" type="text/plain"><tt>PIL.WebPImagePlugin</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.ImageFile">PIL.ImageFile</a>
+ &#8226;   <a href="#PIL.JpegImagePlugin">PIL.JpegImagePlugin</a>
+ &#8226;   <a href="#PIL._webp">PIL._webp</a>
+ &#8226;   <a href="#io">io</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL.Image">PIL.Image</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.WmfImagePlugin"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/WmfImagePlugin.py" type="text/plain"><tt>PIL.WmfImagePlugin</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.ImageFile">PIL.ImageFile</a>
+ &#8226;   <a href="#PIL._binary">PIL._binary</a>
+ &#8226;   <a href="#__future__">__future__</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL.Image">PIL.Image</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.XVThumbImagePlugin"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/XVThumbImagePlugin.py" type="text/plain"><tt>PIL.XVThumbImagePlugin</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.ImageFile">PIL.ImageFile</a>
+ &#8226;   <a href="#PIL.ImagePalette">PIL.ImagePalette</a>
+ &#8226;   <a href="#PIL._binary">PIL._binary</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL.Image">PIL.Image</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.XbmImagePlugin"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/XbmImagePlugin.py" type="text/plain"><tt>PIL.XbmImagePlugin</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.ImageFile">PIL.ImageFile</a>
+ &#8226;   <a href="#re">re</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL.Image">PIL.Image</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.XpmImagePlugin"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/XpmImagePlugin.py" type="text/plain"><tt>PIL.XpmImagePlugin</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.ImageFile">PIL.ImageFile</a>
+ &#8226;   <a href="#PIL.ImagePalette">PIL.ImagePalette</a>
+ &#8226;   <a href="#PIL._binary">PIL._binary</a>
+ &#8226;   <a href="#re">re</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL.Image">PIL.Image</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL._binary"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/_binary.py" type="text/plain"><tt>PIL._binary</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#struct">struct</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL.BmpImagePlugin">PIL.BmpImagePlugin</a>
+ &#8226;   <a href="#PIL.CurImagePlugin">PIL.CurImagePlugin</a>
+ &#8226;   <a href="#PIL.DcxImagePlugin">PIL.DcxImagePlugin</a>
+ &#8226;   <a href="#PIL.EpsImagePlugin">PIL.EpsImagePlugin</a>
+ &#8226;   <a href="#PIL.FliImagePlugin">PIL.FliImagePlugin</a>
+ &#8226;   <a href="#PIL.FpxImagePlugin">PIL.FpxImagePlugin</a>
+ &#8226;   <a href="#PIL.GbrImagePlugin">PIL.GbrImagePlugin</a>
+ &#8226;   <a href="#PIL.GifImagePlugin">PIL.GifImagePlugin</a>
+ &#8226;   <a href="#PIL.GimpGradientFile">PIL.GimpGradientFile</a>
+ &#8226;   <a href="#PIL.GimpPaletteFile">PIL.GimpPaletteFile</a>
+ &#8226;   <a href="#PIL.GribStubImagePlugin">PIL.GribStubImagePlugin</a>
+ &#8226;   <a href="#PIL.IcnsImagePlugin">PIL.IcnsImagePlugin</a>
+ &#8226;   <a href="#PIL.IcoImagePlugin">PIL.IcoImagePlugin</a>
+ &#8226;   <a href="#PIL.ImImagePlugin">PIL.ImImagePlugin</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.IptcImagePlugin">PIL.IptcImagePlugin</a>
+ &#8226;   <a href="#PIL.JpegImagePlugin">PIL.JpegImagePlugin</a>
+ &#8226;   <a href="#PIL.MpegImagePlugin">PIL.MpegImagePlugin</a>
+ &#8226;   <a href="#PIL.MspImagePlugin">PIL.MspImagePlugin</a>
+ &#8226;   <a href="#PIL.PaletteFile">PIL.PaletteFile</a>
+ &#8226;   <a href="#PIL.PalmImagePlugin">PIL.PalmImagePlugin</a>
+ &#8226;   <a href="#PIL.PcdImagePlugin">PIL.PcdImagePlugin</a>
+ &#8226;   <a href="#PIL.PcxImagePlugin">PIL.PcxImagePlugin</a>
+ &#8226;   <a href="#PIL.PdfImagePlugin">PIL.PdfImagePlugin</a>
+ &#8226;   <a href="#PIL.PixarImagePlugin">PIL.PixarImagePlugin</a>
+ &#8226;   <a href="#PIL.PngImagePlugin">PIL.PngImagePlugin</a>
+ &#8226;   <a href="#PIL.PsdImagePlugin">PIL.PsdImagePlugin</a>
+ &#8226;   <a href="#PIL.SgiImagePlugin">PIL.SgiImagePlugin</a>
+ &#8226;   <a href="#PIL.SunImagePlugin">PIL.SunImagePlugin</a>
+ &#8226;   <a href="#PIL.TgaImagePlugin">PIL.TgaImagePlugin</a>
+ &#8226;   <a href="#PIL.TiffImagePlugin">PIL.TiffImagePlugin</a>
+ &#8226;   <a href="#PIL.WmfImagePlugin">PIL.WmfImagePlugin</a>
+ &#8226;   <a href="#PIL.XVThumbImagePlugin">PIL.XVThumbImagePlugin</a>
+ &#8226;   <a href="#PIL.XpmImagePlugin">PIL.XpmImagePlugin</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL._imaging"></a>
+  <tt>PIL._imaging</tt> <span class="moduletype"><tt>c:\users\joste\appdata\local\programs\python\python36\lib\site-packages\PIL\_imaging.cp36-win_amd64.pyd</tt></span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL._imagingagg"></a>
+  <a target="code" href="" type="text/plain"><tt>PIL._imagingagg</tt></a>
+<span class="moduletype">MissingModule</span>  <div class="import">
+imported by:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.ImageDraw">PIL.ImageDraw</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL._imagingft"></a>
+  <tt>PIL._imagingft</tt> <span class="moduletype"><tt>c:\users\joste\appdata\local\programs\python\python36\lib\site-packages\PIL\_imagingft.cp36-win_amd64.pyd</tt></span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.ImageFont">PIL.ImageFont</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL._imagingtk"></a>
+  <tt>PIL._imagingtk</tt> <span class="moduletype"><tt>c:\users\joste\appdata\local\programs\python\python36\lib\site-packages\PIL\_imagingtk.cp36-win_amd64.pyd</tt></span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.ImageTk">PIL.ImageTk</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL._util"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/_util.py" type="text/plain"><tt>PIL._util</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#os">os</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.ImageDraw">PIL.ImageDraw</a>
+ &#8226;   <a href="#PIL.ImageFile">PIL.ImageFile</a>
+ &#8226;   <a href="#PIL.ImageFont">PIL.ImageFont</a>
+ &#8226;   <a href="#PIL.ImageQt">PIL.ImageQt</a>
+ &#8226;   <a href="#PIL.JpegImagePlugin">PIL.JpegImagePlugin</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL._webp"></a>
+  <tt>PIL._webp</tt> <span class="moduletype"><tt>c:\users\joste\appdata\local\programs\python\python36\lib\site-packages\PIL\_webp.cp36-win_amd64.pyd</tt></span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.WebPImagePlugin">PIL.WebPImagePlugin</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PIL.version"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/site-packages/PIL/version.py" type="text/plain"><tt>PIL.version</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL">PIL</a>
+
+  </div>
+
+</div>
+
+<div class="node">
   <a name="PyQt4"></a>
   <a target="code" href="" type="text/plain"><tt>PyQt4</tt></a>
 <span class="moduletype">MissingModule</span>  <div class="import">
@@ -1014,6 +2901,17 @@ imported by:
 </div>
 
 <div class="node">
+  <a name="Tkinter"></a>
+  <a target="code" href="" type="text/plain"><tt>Tkinter</tt></a>
+<span class="moduletype">MissingModule</span>  <div class="import">
+imported by:
+    <a href="#PIL.ImageTk">PIL.ImageTk</a>
+
+  </div>
+
+</div>
+
+<div class="node">
   <a name="UserDict"></a>
   <a target="code" href="" type="text/plain"><tt>UserDict</tt></a>
 <span class="moduletype">MissingModule</span>  <div class="import">
@@ -1029,7 +2927,8 @@ imported by:
   <a target="code" href="" type="text/plain"><tt>__builtin__</tt></a>
 <span class="moduletype">MissingModule</span>  <div class="import">
 imported by:
-    <a href="#numpy">numpy</a>
+    <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#numpy">numpy</a>
  &#8226;   <a href="#numpy.core.numeric">numpy.core.numeric</a>
  &#8226;   <a href="#numpy.core.numerictypes">numpy.core.numerictypes</a>
  &#8226;   <a href="#numpy.distutils.misc_util">numpy.distutils.misc_util</a>
@@ -1048,7 +2947,15 @@ imported by:
   <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/__future__.py" type="text/plain"><tt>__future__</tt></a>
 <span class="moduletype">SourceModule</span>  <div class="import">
 imported by:
-    <a href="#automation.py">automation.py</a>
+    <a href="#PIL.CurImagePlugin">PIL.CurImagePlugin</a>
+ &#8226;   <a href="#PIL.FpxImagePlugin">PIL.FpxImagePlugin</a>
+ &#8226;   <a href="#PIL.ImageShow">PIL.ImageShow</a>
+ &#8226;   <a href="#PIL.IptcImagePlugin">PIL.IptcImagePlugin</a>
+ &#8226;   <a href="#PIL.JpegImagePlugin">PIL.JpegImagePlugin</a>
+ &#8226;   <a href="#PIL.SpiderImagePlugin">PIL.SpiderImagePlugin</a>
+ &#8226;   <a href="#PIL.TiffImagePlugin">PIL.TiffImagePlugin</a>
+ &#8226;   <a href="#PIL.WmfImagePlugin">PIL.WmfImagePlugin</a>
+ &#8226;   <a href="#automation.py">automation.py</a>
  &#8226;   <a href="#codeop">codeop</a>
  &#8226;   <a href="#dateutil.parser._parser">dateutil.parser._parser</a>
  &#8226;   <a href="#doctest">doctest</a>
@@ -2304,7 +4211,9 @@ imported by:
   <a name="array"></a>
   <tt>array</tt> <span class="moduletype"><i>(builtin module)</i></span>  <div class="import">
 imported by:
-    <a href="#multiprocessing.dummy">multiprocessing.dummy</a>
+    <a href="#PIL.ImagePalette">PIL.ImagePalette</a>
+ &#8226;   <a href="#PIL.JpegImagePlugin">PIL.JpegImagePlugin</a>
+ &#8226;   <a href="#multiprocessing.dummy">multiprocessing.dummy</a>
  &#8226;   <a href="#multiprocessing.managers">multiprocessing.managers</a>
  &#8226;   <a href="#multiprocessing.reduction">multiprocessing.reduction</a>
  &#8226;   <a href="#pkg_resources._vendor.appdirs">pkg_resources._vendor.appdirs</a>
@@ -2343,7 +4252,8 @@ imported by:
   <a name="atexit"></a>
   <tt>atexit</tt> <span class="moduletype"><i>(builtin module)</i></span>  <div class="import">
 imported by:
-    <a href="#automation.py">automation.py</a>
+    <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#automation.py">automation.py</a>
  &#8226;   <a href="#concurrent.futures.process">concurrent.futures.process</a>
  &#8226;   <a href="#concurrent.futures.thread">concurrent.futures.thread</a>
  &#8226;   <a href="#logging">logging</a>
@@ -2384,7 +4294,8 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#automation.py">automation.py</a>
+    <a href="#PIL.ImageFont">PIL.ImageFont</a>
+ &#8226;   <a href="#automation.py">automation.py</a>
  &#8226;   <a href="#email._encoded_words">email._encoded_words</a>
  &#8226;   <a href="#email.base64mime">email.base64mime</a>
  &#8226;   <a href="#email.encoders">email.encoders</a>
@@ -2512,7 +4423,8 @@ imported by:
   <a name="builtins"></a>
   <tt>builtins</tt> <span class="moduletype"><i>(builtin module)</i></span>  <div class="import">
 imported by:
-    <a href="#automation.py">automation.py</a>
+    <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#automation.py">automation.py</a>
  &#8226;   <a href="#bz2">bz2</a>
  &#8226;   <a href="#codecs">codecs</a>
  &#8226;   <a href="#doctest">doctest</a>
@@ -2657,6 +4569,19 @@ imported by:
 <span class="moduletype">MissingModule</span>  <div class="import">
 imported by:
     <a href="#setuptools.ssl_support">setuptools.ssl_support</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="cffi"></a>
+  <a target="code" href="" type="text/plain"><tt>cffi</tt></a>
+<span class="moduletype">MissingModule</span>  <div class="import">
+imported by:
+    <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.ImageTk">PIL.ImageTk</a>
+ &#8226;   <a href="#PIL.PyAccess">PIL.PyAccess</a>
 
   </div>
 
@@ -2926,7 +4851,10 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#_pydecimal">_pydecimal</a>
+    <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.TiffImagePlugin">PIL.TiffImagePlugin</a>
+ &#8226;   <a href="#PIL.TiffTags">PIL.TiffTags</a>
+ &#8226;   <a href="#_pydecimal">_pydecimal</a>
  &#8226;   <a href="#argparse">argparse</a>
  &#8226;   <a href="#ast">ast</a>
  &#8226;   <a href="#automation.py">automation.py</a>
@@ -3025,6 +4953,17 @@ imported by:
  &#8226;   <a href="#inspect">inspect</a>
  &#8226;   <a href="#sqlite3.dbapi2">sqlite3.dbapi2</a>
  &#8226;   <a href="#types">types</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="colorsys"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/colorsys.py" type="text/plain"><tt>colorsys</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imported by:
+    <a href="#PIL.ImageColor">PIL.ImageColor</a>
 
   </div>
 
@@ -3243,15 +5182,16 @@ imported by:
   <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/copy.py" type="text/plain"><tt>copy</tt></a>
 <span class="moduletype">SourceModule</span>  <div class="import">
 imports:
-    <a href="#'org.python'">'org.python'</a>
- &#8226;   <a href="#copyreg">copyreg</a>
+    <a href="#copyreg">copyreg</a>
+ &#8226;   <a href="#org">org</a>
  &#8226;   <a href="#types">types</a>
  &#8226;   <a href="#weakref">weakref</a>
 
   </div>
   <div class="import">
 imported by:
-    <a href="#_sre">_sre</a>
+    <a href="#PIL.GifImagePlugin">PIL.GifImagePlugin</a>
+ &#8226;   <a href="#_sre">_sre</a>
  &#8226;   <a href="#argparse">argparse</a>
  &#8226;   <a href="#automation.py">automation.py</a>
  &#8226;   <a href="#collections">collections</a>
@@ -5146,7 +7086,8 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#distutils.archive_util">distutils.archive_util</a>
+    <a href="#PIL.EpsImagePlugin">PIL.EpsImagePlugin</a>
+ &#8226;   <a href="#distutils.archive_util">distutils.archive_util</a>
  &#8226;   <a href="#distutils.ccompiler">distutils.ccompiler</a>
  &#8226;   <a href="#distutils.cmd">distutils.cmd</a>
  &#8226;   <a href="#distutils.cygwinccompiler">distutils.cygwinccompiler</a>
@@ -8531,6 +10472,7 @@ imported by:
  &#8226;   <a href="#signal">signal</a>
  &#8226;   <a href="#socket">socket</a>
  &#8226;   <a href="#ssl">ssl</a>
+ &#8226;   <a href="#tkinter">tkinter</a>
 
   </div>
 
@@ -8661,7 +10603,8 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#dateutil.rrule">dateutil.rrule</a>
+    <a href="#PIL.TiffImagePlugin">PIL.TiffImagePlugin</a>
+ &#8226;   <a href="#dateutil.rrule">dateutil.rrule</a>
 
   </div>
 
@@ -8704,7 +10647,8 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#automation.py">automation.py</a>
+    <a href="#PIL.ImageFilter">PIL.ImageFilter</a>
+ &#8226;   <a href="#automation.py">automation.py</a>
  &#8226;   <a href="#concurrent.futures.process">concurrent.futures.process</a>
  &#8226;   <a href="#configparser">configparser</a>
  &#8226;   <a href="#contextlib">contextlib</a>
@@ -9517,7 +11461,24 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#_compression">_compression</a>
+    <a href="#PIL.DdsImagePlugin">PIL.DdsImagePlugin</a>
+ &#8226;   <a href="#PIL.EpsImagePlugin">PIL.EpsImagePlugin</a>
+ &#8226;   <a href="#PIL.FtexImagePlugin">PIL.FtexImagePlugin</a>
+ &#8226;   <a href="#PIL.IcnsImagePlugin">PIL.IcnsImagePlugin</a>
+ &#8226;   <a href="#PIL.IcoImagePlugin">PIL.IcoImagePlugin</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.ImageFile">PIL.ImageFile</a>
+ &#8226;   <a href="#PIL.ImageFont">PIL.ImageFont</a>
+ &#8226;   <a href="#PIL.ImageQt">PIL.ImageQt</a>
+ &#8226;   <a href="#PIL.ImageTk">PIL.ImageTk</a>
+ &#8226;   <a href="#PIL.IptcImagePlugin">PIL.IptcImagePlugin</a>
+ &#8226;   <a href="#PIL.Jpeg2KImagePlugin">PIL.Jpeg2KImagePlugin</a>
+ &#8226;   <a href="#PIL.JpegImagePlugin">PIL.JpegImagePlugin</a>
+ &#8226;   <a href="#PIL.MspImagePlugin">PIL.MspImagePlugin</a>
+ &#8226;   <a href="#PIL.PdfImagePlugin">PIL.PdfImagePlugin</a>
+ &#8226;   <a href="#PIL.TiffImagePlugin">PIL.TiffImagePlugin</a>
+ &#8226;   <a href="#PIL.WebPImagePlugin">PIL.WebPImagePlugin</a>
+ &#8226;   <a href="#_compression">_compression</a>
  &#8226;   <a href="#automation.py">automation.py</a>
  &#8226;   <a href="#bz2">bz2</a>
  &#8226;   <a href="#cgi">cgi</a>
@@ -9616,7 +11577,9 @@ imported by:
   <a name="itertools"></a>
   <tt>itertools</tt> <span class="moduletype"><i>(builtin module)</i></span>  <div class="import">
 imported by:
-    <a href="#_pydecimal">_pydecimal</a>
+    <a href="#PIL.GifImagePlugin">PIL.GifImagePlugin</a>
+ &#8226;   <a href="#PIL.TiffImagePlugin">PIL.TiffImagePlugin</a>
+ &#8226;   <a href="#_pydecimal">_pydecimal</a>
  &#8226;   <a href="#automation.py">automation.py</a>
  &#8226;   <a href="#calendar">calendar</a>
  &#8226;   <a href="#collections">collections</a>
@@ -10284,7 +12247,11 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#automation.py">automation.py</a>
+    <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.PcxImagePlugin">PIL.PcxImagePlugin</a>
+ &#8226;   <a href="#PIL.PngImagePlugin">PIL.PngImagePlugin</a>
+ &#8226;   <a href="#PIL.PyAccess">PIL.PyAccess</a>
+ &#8226;   <a href="#automation.py">automation.py</a>
  &#8226;   <a href="#concurrent.futures._base">concurrent.futures._base</a>
  &#8226;   <a href="#hashlib">hashlib</a>
  &#8226;   <a href="#http.cookiejar">http.cookiejar</a>
@@ -10352,7 +12319,12 @@ imported by:
   <a name="math"></a>
   <tt>math</tt> <span class="moduletype"><i>(builtin module)</i></span>  <div class="import">
 imported by:
-    <a href="#_pydecimal">_pydecimal</a>
+    <a href="#PIL.BmpImagePlugin">PIL.BmpImagePlugin</a>
+ &#8226;   <a href="#PIL.GifImagePlugin">PIL.GifImagePlugin</a>
+ &#8226;   <a href="#PIL.GimpGradientFile">PIL.GimpGradientFile</a>
+ &#8226;   <a href="#PIL.IcoImagePlugin">PIL.IcoImagePlugin</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#_pydecimal">_pydecimal</a>
  &#8226;   <a href="#automation.py">automation.py</a>
  &#8226;   <a href="#datetime">datetime</a>
  &#8226;   <a href="#dateutil.relativedelta">dateutil.relativedelta</a>
@@ -10415,7 +12387,8 @@ imported by:
   <a name="mmap"></a>
   <tt>mmap</tt> <span class="moduletype"><i>(builtin module)</i></span>  <div class="import">
 imported by:
-    <a href="#multiprocessing.heap">multiprocessing.heap</a>
+    <a href="#PIL.ImageFile">PIL.ImageFile</a>
+ &#8226;   <a href="#multiprocessing.heap">multiprocessing.heap</a>
  &#8226;   <a href="#numpy.core.memmap">numpy.core.memmap</a>
  &#8226;   <a href="#pandas.io.common">pandas.io.common</a>
  &#8226;   <a href="#xlrd">xlrd</a>
@@ -11366,7 +13339,10 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#_pydecimal">_pydecimal</a>
+    <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.ImageDraw">PIL.ImageDraw</a>
+ &#8226;   <a href="#PIL.TiffImagePlugin">PIL.TiffImagePlugin</a>
+ &#8226;   <a href="#_pydecimal">_pydecimal</a>
  &#8226;   <a href="#fractions">fractions</a>
  &#8226;   <a href="#numpy.core.numeric">numpy.core.numeric</a>
  &#8226;   <a href="#numpy.core.numerictypes">numpy.core.numerictypes</a>
@@ -16050,6 +18026,18 @@ imported by:
 </div>
 
 <div class="node">
+  <a name="olefile"></a>
+  <a target="code" href="" type="text/plain"><tt>olefile</tt></a>
+<span class="moduletype">MissingModule</span>  <div class="import">
+imported by:
+    <a href="#PIL.FpxImagePlugin">PIL.FpxImagePlugin</a>
+ &#8226;   <a href="#PIL.MicImagePlugin">PIL.MicImagePlugin</a>
+
+  </div>
+
+</div>
+
+<div class="node">
   <a name="opcode"></a>
   <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/opcode.py" type="text/plain"><tt>opcode</tt></a>
 <span class="moduletype">SourceModule</span>  <div class="import">
@@ -16168,7 +18156,7 @@ imported by:
 <span class="moduletype">MissingModule</span>  <div class="import">
 imported by:
     <a href="#automation.py">automation.py</a>
- &#8226;   <a href="#pickle">pickle</a>
+ &#8226;   <a href="#copy">copy</a>
 
   </div>
 
@@ -16196,7 +18184,21 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#_osx_support">_osx_support</a>
+    <a href="#PIL.EpsImagePlugin">PIL.EpsImagePlugin</a>
+ &#8226;   <a href="#PIL.GifImagePlugin">PIL.GifImagePlugin</a>
+ &#8226;   <a href="#PIL.IcnsImagePlugin">PIL.IcnsImagePlugin</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.ImageFile">PIL.ImageFile</a>
+ &#8226;   <a href="#PIL.ImageFont">PIL.ImageFont</a>
+ &#8226;   <a href="#PIL.ImageShow">PIL.ImageShow</a>
+ &#8226;   <a href="#PIL.IptcImagePlugin">PIL.IptcImagePlugin</a>
+ &#8226;   <a href="#PIL.Jpeg2KImagePlugin">PIL.Jpeg2KImagePlugin</a>
+ &#8226;   <a href="#PIL.JpegImagePlugin">PIL.JpegImagePlugin</a>
+ &#8226;   <a href="#PIL.SgiImagePlugin">PIL.SgiImagePlugin</a>
+ &#8226;   <a href="#PIL.SpiderImagePlugin">PIL.SpiderImagePlugin</a>
+ &#8226;   <a href="#PIL.TiffImagePlugin">PIL.TiffImagePlugin</a>
+ &#8226;   <a href="#PIL._util">PIL._util</a>
+ &#8226;   <a href="#_osx_support">_osx_support</a>
  &#8226;   <a href="#argparse">argparse</a>
  &#8226;   <a href="#automation.py">automation.py</a>
  &#8226;   <a href="#bdb">bdb</a>
@@ -16338,6 +18340,7 @@ imported by:
  &#8226;   <a href="#pandas.util.testing">pandas.util.testing</a>
  &#8226;   <a href="#pathlib">pathlib</a>
  &#8226;   <a href="#pdb">pdb</a>
+ &#8226;   <a href="#pipes">pipes</a>
  &#8226;   <a href="#pkg_resources">pkg_resources</a>
  &#8226;   <a href="#pkg_resources._vendor.appdirs">pkg_resources._vendor.appdirs</a>
  &#8226;   <a href="#pkg_resources._vendor.packaging.markers">pkg_resources._vendor.packaging.markers</a>
@@ -16376,6 +18379,7 @@ imported by:
  &#8226;   <a href="#sysconfig">sysconfig</a>
  &#8226;   <a href="#tarfile">tarfile</a>
  &#8226;   <a href="#tempfile">tempfile</a>
+ &#8226;   <a href="#tkinter">tkinter</a>
  &#8226;   <a href="#unittest.loader">unittest.loader</a>
  &#8226;   <a href="#unittest.main">unittest.main</a>
  &#8226;   <a href="#urllib.request">urllib.request</a>
@@ -23413,9 +25417,21 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#numpy.compat.py3k">numpy.compat.py3k</a>
+    <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#numpy.compat.py3k">numpy.compat.py3k</a>
  &#8226;   <a href="#pandas.io.common">pandas.io.common</a>
  &#8226;   <a href="#pandas.util.testing">pandas.util.testing</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="pathlib2"></a>
+  <a target="code" href="" type="text/plain"><tt>pathlib2</tt></a>
+<span class="moduletype">MissingModule</span>  <div class="import">
+imported by:
+    <a href="#PIL.Image">PIL.Image</a>
 
   </div>
 
@@ -23463,7 +25479,8 @@ imported by:
   <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/pickle.py" type="text/plain"><tt>pickle</tt></a>
 <span class="moduletype">SourceModule</span>  <div class="import">
 imports:
-    <a href="#_compat_pickle">_compat_pickle</a>
+    <a href="#'org.python'">'org.python'</a>
+ &#8226;   <a href="#_compat_pickle">_compat_pickle</a>
  &#8226;   <a href="#_pickle">_pickle</a>
  &#8226;   <a href="#argparse">argparse</a>
  &#8226;   <a href="#codecs">codecs</a>
@@ -23472,7 +25489,6 @@ imports:
  &#8226;   <a href="#functools">functools</a>
  &#8226;   <a href="#io">io</a>
  &#8226;   <a href="#itertools">itertools</a>
- &#8226;   <a href="#org">org</a>
  &#8226;   <a href="#pprint">pprint</a>
  &#8226;   <a href="#re">re</a>
  &#8226;   <a href="#struct">struct</a>
@@ -23495,6 +25511,25 @@ imported by:
  &#8226;   <a href="#setuptools.sandbox">setuptools.sandbox</a>
  &#8226;   <a href="#tracemalloc">tracemalloc</a>
  &#8226;   <a href="#win32com.client.gencache">win32com.client.gencache</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="pipes"></a>
+  <a target="code" href="///C:/users/joste/appdata/local/programs/python/python36/lib/pipes.py" type="text/plain"><tt>pipes</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#os">os</a>
+ &#8226;   <a href="#re">re</a>
+ &#8226;   <a href="#shlex">shlex</a>
+ &#8226;   <a href="#tempfile">tempfile</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PIL.ImageShow">PIL.ImageShow</a>
 
   </div>
 
@@ -24744,7 +26779,8 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#automation.py">automation.py</a>
+    <a href="#PIL.ImagePalette">PIL.ImagePalette</a>
+ &#8226;   <a href="#automation.py">automation.py</a>
  &#8226;   <a href="#email.generator">email.generator</a>
  &#8226;   <a href="#email.utils">email.utils</a>
  &#8226;   <a href="#multiprocessing.forkserver">multiprocessing.forkserver</a>
@@ -24775,7 +26811,15 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#_osx_support">_osx_support</a>
+    <a href="#PIL.EpsImagePlugin">PIL.EpsImagePlugin</a>
+ &#8226;   <a href="#PIL.GimpPaletteFile">PIL.GimpPaletteFile</a>
+ &#8226;   <a href="#PIL.ImImagePlugin">PIL.ImImagePlugin</a>
+ &#8226;   <a href="#PIL.ImageColor">PIL.ImageColor</a>
+ &#8226;   <a href="#PIL.ImtImagePlugin">PIL.ImtImagePlugin</a>
+ &#8226;   <a href="#PIL.PngImagePlugin">PIL.PngImagePlugin</a>
+ &#8226;   <a href="#PIL.XbmImagePlugin">PIL.XbmImagePlugin</a>
+ &#8226;   <a href="#PIL.XpmImagePlugin">PIL.XpmImagePlugin</a>
+ &#8226;   <a href="#_osx_support">_osx_support</a>
  &#8226;   <a href="#_pydecimal">_pydecimal</a>
  &#8226;   <a href="#_sre">_sre</a>
  &#8226;   <a href="#_strptime">_strptime</a>
@@ -24880,6 +26924,7 @@ imported by:
  &#8226;   <a href="#pathlib">pathlib</a>
  &#8226;   <a href="#pdb">pdb</a>
  &#8226;   <a href="#pickle">pickle</a>
+ &#8226;   <a href="#pipes">pipes</a>
  &#8226;   <a href="#pkg_resources">pkg_resources</a>
  &#8226;   <a href="#pkg_resources._vendor.packaging.requirements">pkg_resources._vendor.packaging.requirements</a>
  &#8226;   <a href="#pkg_resources._vendor.packaging.specifiers">pkg_resources._vendor.packaging.specifiers</a>
@@ -24906,6 +26951,7 @@ imported by:
  &#8226;   <a href="#sysconfig">sysconfig</a>
  &#8226;   <a href="#tarfile">tarfile</a>
  &#8226;   <a href="#textwrap">textwrap</a>
+ &#8226;   <a href="#tkinter">tkinter</a>
  &#8226;   <a href="#token">token</a>
  &#8226;   <a href="#tokenize">tokenize</a>
  &#8226;   <a href="#unittest.case">unittest.case</a>
@@ -25953,11 +27999,13 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#automation.py">automation.py</a>
+    <a href="#PIL.ImageShow">PIL.ImageShow</a>
+ &#8226;   <a href="#automation.py">automation.py</a>
  &#8226;   <a href="#netrc">netrc</a>
  &#8226;   <a href="#numpy.distutils.ccompiler">numpy.distutils.ccompiler</a>
  &#8226;   <a href="#numpy.distutils.command.build_src">numpy.distutils.command.build_src</a>
  &#8226;   <a href="#pdb">pdb</a>
+ &#8226;   <a href="#pipes">pipes</a>
  &#8226;   <a href="#setuptools.command.easy_install">setuptools.command.easy_install</a>
  &#8226;   <a href="#setuptools.dist">setuptools.dist</a>
  &#8226;   <a href="#webbrowser">webbrowser</a>
@@ -25989,7 +28037,9 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#automation.py">automation.py</a>
+    <a href="#PIL.EpsImagePlugin">PIL.EpsImagePlugin</a>
+ &#8226;   <a href="#PIL.IcnsImagePlugin">PIL.IcnsImagePlugin</a>
+ &#8226;   <a href="#automation.py">automation.py</a>
  &#8226;   <a href="#ctypes.util">ctypes.util</a>
  &#8226;   <a href="#distutils._msvccompiler">distutils._msvccompiler</a>
  &#8226;   <a href="#http.server">http.server</a>
@@ -26405,7 +28455,8 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#automation.py">automation.py</a>
+    <a href="#PIL.PpmImagePlugin">PIL.PpmImagePlugin</a>
+ &#8226;   <a href="#automation.py">automation.py</a>
  &#8226;   <a href="#cmd">cmd</a>
  &#8226;   <a href="#dateutil.parser._parser">dateutil.parser._parser</a>
  &#8226;   <a href="#distutils.fancy_getopt">distutils.fancy_getopt</a>
@@ -26458,7 +28509,22 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#automation.py">automation.py</a>
+    <a href="#PIL.DdsImagePlugin">PIL.DdsImagePlugin</a>
+ &#8226;   <a href="#PIL.FtexImagePlugin">PIL.FtexImagePlugin</a>
+ &#8226;   <a href="#PIL.IcnsImagePlugin">PIL.IcnsImagePlugin</a>
+ &#8226;   <a href="#PIL.IcoImagePlugin">PIL.IcoImagePlugin</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.ImageFile">PIL.ImageFile</a>
+ &#8226;   <a href="#PIL.Jpeg2KImagePlugin">PIL.Jpeg2KImagePlugin</a>
+ &#8226;   <a href="#PIL.JpegImagePlugin">PIL.JpegImagePlugin</a>
+ &#8226;   <a href="#PIL.McIdasImagePlugin">PIL.McIdasImagePlugin</a>
+ &#8226;   <a href="#PIL.MspImagePlugin">PIL.MspImagePlugin</a>
+ &#8226;   <a href="#PIL.PngImagePlugin">PIL.PngImagePlugin</a>
+ &#8226;   <a href="#PIL.SgiImagePlugin">PIL.SgiImagePlugin</a>
+ &#8226;   <a href="#PIL.SpiderImagePlugin">PIL.SpiderImagePlugin</a>
+ &#8226;   <a href="#PIL.TiffImagePlugin">PIL.TiffImagePlugin</a>
+ &#8226;   <a href="#PIL._binary">PIL._binary</a>
+ &#8226;   <a href="#automation.py">automation.py</a>
  &#8226;   <a href="#base64">base64</a>
  &#8226;   <a href="#ctypes">ctypes</a>
  &#8226;   <a href="#ctypes.util">ctypes.util</a>
@@ -26523,7 +28589,11 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#automation.py">automation.py</a>
+    <a href="#PIL.EpsImagePlugin">PIL.EpsImagePlugin</a>
+ &#8226;   <a href="#PIL.GifImagePlugin">PIL.GifImagePlugin</a>
+ &#8226;   <a href="#PIL.IcnsImagePlugin">PIL.IcnsImagePlugin</a>
+ &#8226;   <a href="#PIL.JpegImagePlugin">PIL.JpegImagePlugin</a>
+ &#8226;   <a href="#automation.py">automation.py</a>
  &#8226;   <a href="#ctypes.util">ctypes.util</a>
  &#8226;   <a href="#distutils._msvccompiler">distutils._msvccompiler</a>
  &#8226;   <a href="#distutils.command.bdist_rpm">distutils.command.bdist_rpm</a>
@@ -26559,7 +28629,18 @@ imported by:
   <a name="sys"></a>
   <tt>sys</tt> <span class="moduletype"><i>(builtin module)</i></span>  <div class="import">
 imported by:
-    <a href="#_bootlocale">_bootlocale</a>
+    <a href="#PIL.EpsImagePlugin">PIL.EpsImagePlugin</a>
+ &#8226;   <a href="#PIL.IcnsImagePlugin">PIL.IcnsImagePlugin</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.ImageFile">PIL.ImageFile</a>
+ &#8226;   <a href="#PIL.ImageFont">PIL.ImageFont</a>
+ &#8226;   <a href="#PIL.ImageShow">PIL.ImageShow</a>
+ &#8226;   <a href="#PIL.ImageTk">PIL.ImageTk</a>
+ &#8226;   <a href="#PIL.PyAccess">PIL.PyAccess</a>
+ &#8226;   <a href="#PIL.SgiImagePlugin">PIL.SgiImagePlugin</a>
+ &#8226;   <a href="#PIL.SpiderImagePlugin">PIL.SpiderImagePlugin</a>
+ &#8226;   <a href="#PIL.TiffImagePlugin">PIL.TiffImagePlugin</a>
+ &#8226;   <a href="#_bootlocale">_bootlocale</a>
  &#8226;   <a href="#_collections_abc">_collections_abc</a>
  &#8226;   <a href="#_osx_support">_osx_support</a>
  &#8226;   <a href="#_pydecimal">_pydecimal</a>
@@ -26785,6 +28866,7 @@ imported by:
  &#8226;   <a href="#sysconfig">sysconfig</a>
  &#8226;   <a href="#tarfile">tarfile</a>
  &#8226;   <a href="#threading">threading</a>
+ &#8226;   <a href="#tkinter">tkinter</a>
  &#8226;   <a href="#token">token</a>
  &#8226;   <a href="#tokenize">tokenize</a>
  &#8226;   <a href="#traceback">traceback</a>
@@ -26925,7 +29007,12 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#_osx_support">_osx_support</a>
+    <a href="#PIL.EpsImagePlugin">PIL.EpsImagePlugin</a>
+ &#8226;   <a href="#PIL.IcnsImagePlugin">PIL.IcnsImagePlugin</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.IptcImagePlugin">PIL.IptcImagePlugin</a>
+ &#8226;   <a href="#PIL.JpegImagePlugin">PIL.JpegImagePlugin</a>
+ &#8226;   <a href="#_osx_support">_osx_support</a>
  &#8226;   <a href="#automation.py">automation.py</a>
  &#8226;   <a href="#cgi">cgi</a>
  &#8226;   <a href="#ctypes.util">ctypes.util</a>
@@ -26945,6 +29032,7 @@ imported by:
  &#8226;   <a href="#numpy.lib.npyio">numpy.lib.npyio</a>
  &#8226;   <a href="#numpy.testing.nose_tools.utils">numpy.testing.nose_tools.utils</a>
  &#8226;   <a href="#pandas.util.testing">pandas.util.testing</a>
+ &#8226;   <a href="#pipes">pipes</a>
  &#8226;   <a href="#pkg_resources">pkg_resources</a>
  &#8226;   <a href="#pydoc">pydoc</a>
  &#8226;   <a href="#pyi_rth_win32comgenpy.py">pyi_rth_win32comgenpy.py</a>
@@ -27231,6 +29319,7 @@ imported by:
  &#8226;   <a href="#pydoc">pydoc</a>
  &#8226;   <a href="#socketserver">socketserver</a>
  &#8226;   <a href="#threading">threading</a>
+ &#8226;   <a href="#tkinter">tkinter</a>
  &#8226;   <a href="#unittest.case">unittest.case</a>
  &#8226;   <a href="#unittest.loader">unittest.loader</a>
  &#8226;   <a href="#unittest.result">unittest.result</a>
@@ -27906,7 +29995,10 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#automation.py">automation.py</a>
+    <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PIL.JpegImagePlugin">PIL.JpegImagePlugin</a>
+ &#8226;   <a href="#PIL.TiffImagePlugin">PIL.TiffImagePlugin</a>
+ &#8226;   <a href="#automation.py">automation.py</a>
  &#8226;   <a href="#base64">base64</a>
  &#8226;   <a href="#bz2">bz2</a>
  &#8226;   <a href="#cgi">cgi</a>
@@ -29533,7 +31625,8 @@ imported by:
   <a name="zlib"></a>
   <tt>zlib</tt> <span class="moduletype"><i>(builtin module)</i></span>  <div class="import">
 imported by:
-    <a href="#automation.py">automation.py</a>
+    <a href="#PIL.PngImagePlugin">PIL.PngImagePlugin</a>
+ &#8226;   <a href="#automation.py">automation.py</a>
  &#8226;   <a href="#encodings.zlib_codec">encodings.zlib_codec</a>
  &#8226;   <a href="#gzip">gzip</a>
  &#8226;   <a href="#pandas.io.packers">pandas.io.packers</a>

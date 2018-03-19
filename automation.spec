@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['automation.py'],
-             pathex=['C:\\Users\\joste\\Documents\\Python\\cca'],
+             pathex=['C:\\Users\\joste\\Documents\\Python\\CCA'],
              binaries=[],
              datas=[],
              hiddenimports=[],

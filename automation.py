@@ -53,7 +53,7 @@ def setRoster(side, roster):
         p.close
 
 
-def writeHTML(side,color1,color2):
+def createHTML(side,color1,color2):
     s = ['<html>\n<head>\n<meta name="viewport" content="width=device-width, initial-scale=1">\n<style>\n#secondary-color {\n  height: 100px;\n  width: 100px;\n  overflow: hidden;\n  background-color: ',
          '', ';\n}\n\n#triangle-topleft {\n  width: 0;\n  height: 0;\n  border-top: 100px solid ','',
          ';\n  border-right: 100px solid transparent;\n}\n\n</style>\n</head>\n<body>\n\t<div id="secondary-color">\n\t\t<div id="triangle-topleft"></div>\n\t</div>\n</body>\n</html> ']
@@ -91,10 +91,18 @@ def newMatch():
     t2.color1, t2.color2 = getColor(t2.school)
 
     print("Home team: {0}\n\tHex Colors: {1}, {2}\n\tRGB colors: {3}, {4}" .format(t1.school,t1.color1,t1.color2,hexToRGB(t1.color1),hexToRGB(t1.color2)))
-    print("Away team: {0}\n\tHex Colors: {1}, {2}\n\tRGB colors: {3}, {4}" .format(t2.school,t2.color1,t2.color2,hexToRGB(t2.color1),hexToRGB(t2.color2)))
+    print("Away team: {0}\n\tHex Colors: {1}, {2}\n\tRGB colors: {3}, {4}\n" .format(t2.school,t2.color1,t2.color2,hexToRGB(t2.color1),hexToRGB(t2.color2)))
 
+
+    print('Generating HTML Files...')
+    createHTML(t1.side,t1.color1,t1.color2)
+    createHTML(t2.side,t2.color1,t2.color2)
+    print('HTML files generated\n')
+
+    print('Generating PNG files...')
     createPNG(t1.side,t1.color1,t1.color2)
     createPNG(t2.side,t2.color1,t2.color2)
+    print('PNG files generated\n')
 
     print('\nPress ENTER to exit')
 
