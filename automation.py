@@ -15,7 +15,8 @@ class team(object):
 
     def createTeam(self):
         self.name = input('Enter {0} side Team Name: '.format(self.side))
-        self.school = getSchool(self.name)
+        self.school = input('Enter {0} side School Name: '.format(self.side))
+        # self.school = getSchool(self.name)
         self.color1, self.color2 = getColor(self.school)
 
         setScoreboard(self.side,changeScoreboard(self.side,self.name))
@@ -60,7 +61,7 @@ def getColor(name):
     return(color1, color2)
 
 def getRoster(name):
-    wb = pd.read_excel('roster test.xlsx')
+    wb = pd.read_csv('RL_registered_players_March19.csv')
 
     num = len(wb.index)
 
@@ -68,27 +69,30 @@ def getRoster(name):
     n = 0
 
     for k in range(0,num):
-        if wb.iloc[k]['Team name'] == name:
+        if wb.iloc[k]['Team Name'] == name:
             roster[n] = wb.iloc[k]['Username']
             n = n + 1
     return(roster)
 
-def getSchool(name):
-    wb = pd.read_excel('roster test.xlsx')
-
-    num = len(wb.index)
-
-    school = ''
-
-    for k in range(0,num):
-        if wb.iloc[k]['Team name'] == name:
-            school = wb.iloc[k]['College']
-
-    return(school)
+# def getSchool(name):
+#     wb = pd.read_excel('RL_registered_players_March19.xlsx')
+#
+#     num = len(wb.index)
+#
+#     school = ''
+#
+#     for k in range(0,num):
+#         if wb.iloc[k]['Team Name'] == name:
+#             school = wb.iloc[k]['College']
+#
+#     if school == '':
+#         school = input('School not found, enter school name manually: ')
+#
+#     return(school)
 
 def changeScoreboard(side,name):
-    choice = 'n'
-    while choice == 'n':
+    c = 'n'
+    while c == 'n':
         c = input('{0} team name is: {1}. Should this be the scoreboard name? (y,n): '.format(side,name))
         if c =='n':
             name = input('Enter new name for {0}: '.format(name))
