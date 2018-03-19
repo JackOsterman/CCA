@@ -17,7 +17,10 @@ class team(object):
         self.name = input('Enter {0} side Team Name: '.format(self.side))
         self.school = getSchool(self.name)
         self.color1, self.color2 = getColor(self.school)
-        print("{5} team: {0}\n\tHex Colors: {1}, {2}\n\tRGB colors: {3}, {4}" .format(self.school,self.color1,self.color2,hexToRGB(self.color1),hexToRGB(self.color2),self.side))
+
+        setScoreboard(self.side,changeScoreboard(self.side,self.name))
+
+        print("{5} team: {0}\n\tHex Colors: {1}, {2}\n\tRGB colors: {3}, {4}\n" .format(self.school,self.color1,self.color2,hexToRGB(self.color1),hexToRGB(self.color2),self.side))
 
         self.roster = getRoster(self.name)
 
@@ -83,14 +86,30 @@ def getSchool(name):
 
     return(school)
 
+def changeScoreboard(side,name):
+    choice = 'n'
+    while choice == 'n':
+        c = input('{0} team name is: {1}. Should this be the scoreboard name? (y,n): '.format(side,name))
+        if c =='n':
+            name = input('Enter new name for {0}: '.format(name))
+    return(name)
+
+def setScoreboard(side,name):
+    s = open('%sName.txt' % side,'w')
+    s.write(name)
+    s.close
+
 def printRoster(name, roster):
-    # print('{0} roster:\n{1}'.format(name,roster))
+    print('{0} roster:\n'.format(name))
     for k in range(0,5):
         print('[{0}] {1}'.format(k,roster[k]))
+
+    print('\n')
 
 def changePlayer(roster):
     playerNum = int(input('Enter number of player you wish to edit: '))
     roster[playerNum] = input('Enter new name for {0}: '.format(roster[playerNum]))
+    print('\n')
 
     return(roster)
 
@@ -140,8 +159,9 @@ def newMatch():
 
     t1 = team()
     t2 = team()
-    t1.side, t2.side = 'blue','orange'
+    t1.side, t2.side = 'Blue','Orange'
 
+    print('----------------COLLEGE CARBALL ASSOCIATION----------------\n')
     t1.createTeam()
     t2.createTeam()
 
