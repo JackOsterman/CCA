@@ -1,6 +1,7 @@
 import pandas as pd
 import webcolors
 import os
+from PIL import Image, ImageDraw
 
 
 class team(object):
@@ -65,6 +66,13 @@ def writeHTML(side,color1,color2):
     h.write(s1)
     h.close()
 
+def createPNG(side,color1,color2):
+    img = Image.new('RGB',(200,200))
+    draw = ImageDraw.Draw(img)
+    draw.polygon([(0,0),(0,200),(200,200),(200,0)], fill = hexToRGB(color2))
+    draw.polygon([(0,0),(0,199),(199,0)], fill = hexToRGB(color1))
+    img.save('%sColors.png' % side)
+
 def hexToRGB(color):
     r,g,b = webcolors.hex_to_rgb(color)
     return(r,g,b)
@@ -85,8 +93,8 @@ def newMatch():
     print("Home team: {0}\n\tHex Colors: {1}, {2}\n\tRGB colors: {3}, {4}" .format(t1.school,t1.color1,t1.color2,hexToRGB(t1.color1),hexToRGB(t1.color2)))
     print("Away team: {0}\n\tHex Colors: {1}, {2}\n\tRGB colors: {3}, {4}" .format(t2.school,t2.color1,t2.color2,hexToRGB(t2.color1),hexToRGB(t2.color2)))
 
-    writeHTML(t1.side,t1.color1,t1.color2)
-    writeHTML(t2.side,t2.color1,t2.color2)
+    createPNG(t1.side,t1.color1,t1.color2)
+    createPNG(t2.side,t2.color1,t2.color2)
 
     print('\nPress ENTER to exit')
 

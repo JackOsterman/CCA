@@ -7,38 +7,38 @@ missing module named multiprocessing.get_context - imported by multiprocessing, 
 missing module named multiprocessing.BufferTooShort - imported by multiprocessing, multiprocessing.connection
 missing module named multiprocessing.AuthenticationError - imported by multiprocessing, multiprocessing.connection
 missing module named pyimod03_importers - imported by c:\users\joste\appdata\local\programs\python\python36\lib\site-packages\PyInstaller\loader\rthooks\pyi_rth_pkgres.py
-missing module named 'pkg_resources.extern.pyparsing' - imported by pkg_resources._vendor.packaging.requirements, pkg_resources._vendor.packaging.markers
 missing module named __builtin__ - imported by pandas.compat, numpy.core.numerictypes, numpy.core.numeric, numpy.distutils.misc_util, numpy.lib.function_base, numpy.lib._iotools, numpy.ma.core, numpy, pkg_resources._vendor.pyparsing
 missing module named ordereddict - imported by pkg_resources._vendor.pyparsing
-missing module named StringIO - imported by pandas.compat, six, numpy.lib.utils, numpy.testing.nose_tools.utils, numpy.lib.format, pkg_resources._vendor.six
+missing module named 'pkg_resources.extern.pyparsing' - imported by pkg_resources._vendor.packaging.markers, pkg_resources._vendor.packaging.requirements
 missing module named 'com.sun' - imported by pkg_resources._vendor.appdirs
 missing module named com - imported by pkg_resources._vendor.appdirs
+missing module named StringIO - imported by pandas.compat, six, numpy.lib.utils, numpy.testing.nose_tools.utils, numpy.lib.format, pkg_resources._vendor.six
 missing module named __main__ - imported by pkg_resources
 missing module named pkg_resources.extern.packaging - imported by pkg_resources.extern, pkg_resources, setuptools.dist, setuptools.command.egg_info
 missing module named pkg_resources.extern.appdirs - imported by pkg_resources.extern, pkg_resources
 missing module named 'pkg_resources.extern.six.moves' - imported by pkg_resources, pkg_resources._vendor.packaging.requirements
 missing module named pkg_resources.extern.six - imported by pkg_resources.extern, pkg_resources
 missing module named 'multiprocessing.forking' - imported by c:\users\joste\appdata\local\programs\python\python36\lib\site-packages\PyInstaller\loader\rthooks\pyi_rth_multiprocessing.py
-missing module named resource - imported by posix, E:\Users\Jack\Pictures\cca\Programming\automation.py
-missing module named posix - imported by os, E:\Users\Jack\Pictures\cca\Programming\automation.py
-missing module named _posixsubprocess - imported by subprocess, multiprocessing.util, E:\Users\Jack\Pictures\cca\Programming\automation.py
-missing module named readline - imported by cmd, code, pdb, E:\Users\Jack\Pictures\cca\Programming\automation.py
-excluded module named _frozen_importlib - imported by importlib, importlib.abc, E:\Users\Jack\Pictures\cca\Programming\automation.py
-missing module named _frozen_importlib_external - imported by importlib._bootstrap, importlib, importlib.abc, E:\Users\Jack\Pictures\cca\Programming\automation.py
-missing module named _winreg - imported by platform, numpy.distutils.cpuinfo, E:\Users\Jack\Pictures\cca\Programming\automation.py, pkg_resources._vendor.appdirs
+missing module named resource - imported by posix, C:\Users\joste\Documents\Python\cca\automation.py
+missing module named posix - imported by os, C:\Users\joste\Documents\Python\cca\automation.py
+missing module named _posixsubprocess - imported by subprocess, multiprocessing.util, C:\Users\joste\Documents\Python\cca\automation.py
+missing module named org - imported by pickle, C:\Users\joste\Documents\Python\cca\automation.py
+missing module named readline - imported by cmd, code, pdb, C:\Users\joste\Documents\Python\cca\automation.py
+excluded module named _frozen_importlib - imported by importlib, importlib.abc, C:\Users\joste\Documents\Python\cca\automation.py
+missing module named _frozen_importlib_external - imported by importlib._bootstrap, importlib, importlib.abc, C:\Users\joste\Documents\Python\cca\automation.py
+missing module named _winreg - imported by platform, numpy.distutils.cpuinfo, C:\Users\joste\Documents\Python\cca\automation.py, pkg_resources._vendor.appdirs
 missing module named _scproxy - imported by urllib.request
-missing module named java - imported by platform, unittest.mock, E:\Users\Jack\Pictures\cca\Programming\automation.py
-missing module named 'java.lang' - imported by platform, E:\Users\Jack\Pictures\cca\Programming\automation.py, xml.sax._exceptions
-missing module named vms_lib - imported by platform, E:\Users\Jack\Pictures\cca\Programming\automation.py
-missing module named termios - imported by tty, getpass, pandas.io.formats.terminal, E:\Users\Jack\Pictures\cca\Programming\automation.py
+missing module named java - imported by platform, unittest.mock, C:\Users\joste\Documents\Python\cca\automation.py
+missing module named 'java.lang' - imported by platform, C:\Users\joste\Documents\Python\cca\automation.py, xml.sax._exceptions
+missing module named vms_lib - imported by platform, C:\Users\joste\Documents\Python\cca\automation.py
+missing module named termios - imported by tty, getpass, pandas.io.formats.terminal, C:\Users\joste\Documents\Python\cca\automation.py
 missing module named urllib.pathname2url - imported by urllib, pandas.io.common
 missing module named urllib.urlencode - imported by urllib, pandas.io.common
 missing module named urllib.splittag - imported by urllib, setuptools.py26compat
-missing module named grp - imported by shutil, tarfile, pathlib, distutils.archive_util, E:\Users\Jack\Pictures\cca\Programming\automation.py
-missing module named _dummy_threading - imported by dummy_threading, E:\Users\Jack\Pictures\cca\Programming\automation.py
-missing module named 'org.python' - imported by copy, setuptools.sandbox, E:\Users\Jack\Pictures\cca\Programming\automation.py, xml.sax
-missing module named pwd - imported by posixpath, shutil, tarfile, http.server, webbrowser, pathlib, distutils.util, distutils.archive_util, netrc, getpass, E:\Users\Jack\Pictures\cca\Programming\automation.py
-missing module named org - imported by pickle, E:\Users\Jack\Pictures\cca\Programming\automation.py
+missing module named grp - imported by shutil, tarfile, pathlib, distutils.archive_util, C:\Users\joste\Documents\Python\cca\automation.py
+missing module named pwd - imported by posixpath, shutil, tarfile, http.server, webbrowser, pathlib, distutils.util, distutils.archive_util, netrc, getpass, C:\Users\joste\Documents\Python\cca\automation.py
+missing module named _dummy_threading - imported by dummy_threading, C:\Users\joste\Documents\Python\cca\automation.py
+missing module named 'org.python' - imported by copy, setuptools.sandbox, C:\Users\joste\Documents\Python\cca\automation.py, xml.sax
 missing module named six.moves.range - imported by six.moves, dateutil.rrule
 runtime module named six.moves - imported by dateutil.tz.tz, dateutil.tz.win, dateutil.rrule
 missing module named dateutil.tz.tzfile - imported by dateutil.tz, dateutil.zoneinfo
