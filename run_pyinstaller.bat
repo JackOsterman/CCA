@@ -1,0 +1,1 @@
+pyinstaller automation.py --onefile
