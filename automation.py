@@ -45,14 +45,12 @@ class dataFile(object):
         init = True
 
     def loadFile(self):
-        self.name = input('Enter name of file (without file extension): ')
-        self.extension = input('Enter type of file (csv/xlsx): ')
-        # print('\n')
-        fileName = self.name + '.' + self.extension
-        if self.extension == 'csv':
-            self.df = pd.read_csv(fileName)
+        self.name = input('Enter name of file (include the .csv or .xlsx): ')
+
+        if self.name.endswith('.csv'):
+            self.df = pd.read_csv(self.name)
         else:
-            self.df = pd.read_excel(fileName)
+            self.df = pd.read_excel(self.name)
 
 
 
