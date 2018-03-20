@@ -3,7 +3,6 @@ import webcolors
 import os
 from PIL import Image, ImageDraw
 
-
 class team(object):
 
     name, school, scoreboard, side, color1, color2, alt1, alt2 = ['']*8
@@ -41,7 +40,7 @@ class team(object):
 
 def getColor(name):
 
-    wb = pd.read_excel('Team Colors.xlsx')
+    wb = pd.read_excel(colorFilename)
 
     num = len(wb.index)
 
@@ -61,7 +60,8 @@ def getColor(name):
     return(color1, color2)
 
 def getRoster(name):
-    wb = pd.read_csv('RL_registered_players_March19.csv')
+
+    wb = pd.read_csv(rosterFilename)
 
     num = len(wb.index)
 
@@ -105,13 +105,13 @@ def setScoreboard(side,name):
 
 def printRoster(name, roster):
     print('{0} roster:\n'.format(name))
-    for k in range(0,5):
-        print('[{0}] {1}'.format(k,roster[k]))
+    for k in range(1,6):
+        print('[{0}] {1}'.format(k,roster[k-1]))
 
     print('\n')
 
 def changePlayer(roster):
-    playerNum = int(input('Enter number of player you wish to edit: '))
+    playerNum = int(input('Enter number of player you wish to edit: ')) - 1
     roster[playerNum] = input('Enter new name for {0}: '.format(roster[playerNum]))
     print('\n')
 
@@ -169,35 +169,14 @@ def newMatch():
     t1.createTeam()
     t2.createTeam()
 
-    # t1.name = input('Enter Home (blue team) Team Name: ')
-    # t1.school = getSchool(t1.name)
-    # t1.color1, t1.color2 = getColor(t1.school)
-    #
-    # t2.name = input('Enter Away (orange team) Team Name: ')
-    # t2.school = getSchool(t2.name)
-    # t2.color1, t2.color2 = getColor(t2.school)
-    #
-    # print("Home team: {0}\n\tHex Colors: {1}, {2}\n\tRGB colors: {3}, {4}" .format(t1.school,t1.color1,t1.color2,hexToRGB(t1.color1),hexToRGB(t1.color2)))
-    # print("Away team: {0}\n\tHex Colors: {1}, {2}\n\tRGB colors: {3}, {4}\n" .format(t2.school,t2.color1,t2.color2,hexToRGB(t2.color1),hexToRGB(t2.color2)))
-    #
-    # t1.roster = getRoster(t1.name)
-    #
-    # t1.roster = changeRoster(t1.name,t1.roster)
-    #
-    # setRoster(t1.side,t1.roster)
-    #
-    # print('Generating HTML Files...')
-    # createHTML(t1.side,t1.color1,t1.color2)
-    # createHTML(t2.side,t2.color1,t2.color2)
-    # print('HTML files generated\n')
-    #
-    # print('Generating PNG files...')
-    # createPNG(t1.side,t1.color1,t1.color2)
-    # createPNG(t2.side,t2.color1,t2.color2)
-    # print('PNG files generated\n')
+rosterFilename = input('Enter name of roster file (e.g. RL_registered_players_March19.csv): ')
+colorFilename = input('Enter name of team color file (e.g. Team Colors.xlsx): ')
 
-    print('\nPress ENTER to exit')
+cont = 'y'
+while cont == 'y':
+    newMatch()
+    cont = input('Run another match? (y/n): ')
 
 
-newMatch()
+print('\nPress ENTER to exit')
 input()

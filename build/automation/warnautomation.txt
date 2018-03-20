@@ -9,10 +9,10 @@ missing module named multiprocessing.AuthenticationError - imported by multiproc
 missing module named pyimod03_importers - imported by c:\users\joste\appdata\local\programs\python\python36\lib\site-packages\PyInstaller\loader\rthooks\pyi_rth_pkgres.py
 missing module named 'com.sun' - imported by pkg_resources._vendor.appdirs
 missing module named com - imported by pkg_resources._vendor.appdirs
-missing module named StringIO - imported by pandas.compat, six, numpy.lib.utils, numpy.testing.nose_tools.utils, numpy.lib.format, pkg_resources._vendor.six
 missing module named 'pkg_resources.extern.pyparsing' - imported by pkg_resources._vendor.packaging.requirements, pkg_resources._vendor.packaging.markers
 missing module named __builtin__ - imported by pandas.compat, numpy.core.numerictypes, numpy.core.numeric, numpy.distutils.misc_util, numpy.lib.function_base, numpy.lib._iotools, numpy.ma.core, numpy, PIL.Image, pkg_resources._vendor.pyparsing
 missing module named ordereddict - imported by pkg_resources._vendor.pyparsing
+missing module named StringIO - imported by pandas.compat, six, numpy.lib.utils, numpy.testing.nose_tools.utils, numpy.lib.format, pkg_resources._vendor.six
 missing module named __main__ - imported by pkg_resources
 missing module named pkg_resources.extern.packaging - imported by pkg_resources.extern, pkg_resources, setuptools.dist, setuptools.command.egg_info
 missing module named pkg_resources.extern.appdirs - imported by pkg_resources.extern, pkg_resources
@@ -40,8 +40,8 @@ missing module named pwd - imported by posixpath, shutil, tarfile, http.server, 
 missing module named _dummy_threading - imported by dummy_threading, E:\Users\Jack\Pictures\cca\Programming\automation.py
 missing module named 'org.python' - imported by copy, setuptools.sandbox, E:\Users\Jack\Pictures\cca\Programming\automation.py, xml.sax
 missing module named PIL._imagingagg - imported by PIL, PIL.ImageDraw
-missing module named Tkinter - imported by PIL.ImageTk
 missing module named olefile - imported by PIL.FpxImagePlugin, PIL.MicImagePlugin
+missing module named Tkinter - imported by PIL.ImageTk
 missing module named 'PySide.QtCore' - imported by PIL.ImageQt
 missing module named 'PyQt4.QtCore' - imported by PIL.ImageQt
 missing module named 'PyQt4.QtGui' - imported by PIL.ImageQt
