@@ -12,17 +12,17 @@ class team(object):
     def __init__(self):
         init = True
 
-    def createTeam(self):
+    def createTeam(self,rosterFile,colorFile):
         self.name = input('Enter {0} side Team Name: '.format(self.side))
         self.school = input('Enter {0} side School Name: '.format(self.side))
         # self.school = getSchool(self.name)
-        self.color1, self.color2 = getColor(self.school)
+        self.color1, self.color2 = getColor(self.school,colorFile)
 
         setScoreboard(self.side,changeScoreboard(self.side,self.name))
 
         print("{5} team: {0}\n\tHex Colors: {1}, {2}\n\tRGB colors: {3}, {4}\n" .format(self.school,self.color1,self.color2,hexToRGB(self.color1),hexToRGB(self.color2),self.side))
 
-        self.roster = getRoster(self.name)
+        self.roster = getRoster(self.name,rosterFile)
 
         self.roster = changeRoster(self.name,self.roster)
 
@@ -36,11 +36,29 @@ class team(object):
         createPNG(self.side,self.color1,self.color2)
         print('PNG files generated\n')
 
+class dataFile(object):
+    name, extension = '',''
+    column = ['']*3
+
+    init = False
+    def __init__(self):
+        init = True
+
+    def loadFile(self):
+        self.name = input('Enter name of file (without file extension): ')
+        self.extension = input('Enter type of file (csv/xlsx): ')
+        # print('\n')
+        fileName = self.name + '.' + self.extension
+        if self.extension == 'csv':
+            self.df = pd.read_csv(fileName)
+        else:
+            self.df = pd.read_excel(fileName)
 
 
-def getColor(name):
 
-    wb = pd.read_excel(colorFilename)
+def getColor(name,wb):
+
+    # wb = pd.read_excel(colorFilename)
 
     num = len(wb.index)
 
@@ -59,9 +77,9 @@ def getColor(name):
 
     return(color1, color2)
 
-def getRoster(name):
+def getRoster(name,wb):
 
-    wb = pd.read_csv(rosterFilename)
+    # wb = pd.read_csv(rosterFilename)
 
     num = len(wb.index)
 
@@ -74,7 +92,7 @@ def getRoster(name):
             n = n + 1
     return(roster)
 
-# def getSchool(name):
+# def getSchool(name): #Can't be implemented because data from AVGL does not include College name :(
 #     wb = pd.read_excel('RL_registered_players_March19.xlsx')
 #
 #     num = len(wb.index)
@@ -117,7 +135,6 @@ def changePlayer(roster):
 
     return(roster)
 
-
 def changeRoster(name,roster):
     choice = 'y'
     while choice == 'y':
@@ -126,7 +143,6 @@ def changeRoster(name,roster):
         if choice == 'y':
             roster = changePlayer(roster)
     return(roster)
-
 
 def setRoster(side, roster):
 
@@ -165,12 +181,22 @@ def newMatch():
     t2 = team()
     t1.side, t2.side = 'Blue','Orange'
 
-    print('----------------COLLEGE CARBALL ASSOCIATION----------------\n')
-    t1.createTeam()
-    t2.createTeam()
+    t1.createTeam(roster.df,colors.df)
+    t2.createTeam(roster.df,colors.df)
 
-rosterFilename = input('Enter name of roster file (e.g. RL_registered_players_March19.csv): ')
-colorFilename = input('Enter name of team color file (e.g. Team Colors.xlsx): ')
+# rosterFilename = input('Enter name of roster file (e.g. RL_registered_players_March19.csv): ')
+# colorFilename = input('Enter name of team color file (e.g. Team Colors.xlsx): ')
+# colorFilename = 'Team Colors.xlsx'
+
+print('----------------COLLEGE CARBALL ASSOCIATION----------------\n')
+
+print('Load Roster File')
+roster = dataFile()
+roster.loadFile()
+
+print('Load Team Colors File')
+colors = dataFile()
+colors.loadFile()
 
 cont = 'y'
 while cont == 'y':
