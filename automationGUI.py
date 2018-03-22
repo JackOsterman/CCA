@@ -3,6 +3,7 @@ import webcolors
 import os
 from tkinter import *
 from PIL import Image, ImageDraw, ImageTk
+from pyforms import *
 
 class team(object):
 
@@ -52,33 +53,6 @@ class dataFile(object):
             self.df = pd.read_csv(self.name)
         else:
             self.df = pd.read_excel(self.name)
-class Window(Frame):
-
-    def __init__(self, master=None):
-        Frame.__init__(self, master)
-        self.master = master
-        # self.init_window()
-
-    def init_window(self):
-
-        self.master.title('CCA Scoreboard')
-
-        # self.pack(fill=BOTH, expand = 1)
-
-        Label(text = 'Roster File name (include the .csv or .xlsx)').grid(row = 0, column = 1)
-        rosterFile = Entry(master=None).grid(row = 0, column = 2, columnspan = 2)
-
-        Label(text = 'Team Colors File name (include the .csv or .xlsx)').grid(row = 1, column = 1)
-        colorFile = Entry(master=None).grid(row = 1, column = 2)
-
-        Label(text = 'Blue team').grid(row = 2, column = 1)
-
-        rosterList = getRosterList(Entry.get(rosterFile))
-
-        selectedBlue = StringVar()
-        selectedBlue.set(rosterList[0])
-
-        rosterChoice = OptionMenu(root, selectedBlue, *rosterList).grid(row = 3,column = 1)
 
 def getColor(name,wb):
 
@@ -228,28 +202,4 @@ def newMatch():
 # print('\nPress ENTER to exit')
 # input()
 
-roster, color = '',''
-
-root = Tk()
-
-
-Label(text = 'Roster File name (include the .csv or .xlsx)').grid(row = 0, column = 1)
-rosterFile = Entry(master=None).grid(row = 0, column = 2, columnspan = 2)
-
-Label(text = 'Team Colors File name (include the .csv or .xlsx)').grid(row = 1, column = 1)
-colorFile = Entry(master=None).grid(row = 1, column = 2)
-def close_window():
-    roster = Entry.get(rosterFile)
-    color = Entry.get(colorFile)
-    root.destroy()
-quitButton = Button(root, text="Submit",command=close_window).grid(row = 2, column = 1)
-
-root.mainloop()
-
-Label(text = roster).grid(row = 0, column = 0)
-
-root1 = Tk()
-
-Label
-
-root1.mainloop()
+roster, color = dataFile(),dataFile()
