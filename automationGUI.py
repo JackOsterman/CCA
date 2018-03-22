@@ -1,7 +1,8 @@
 import pandas as pd
 import webcolors
 import os
-from tkinter import *
+# import tkinter
+from appJar import gui
 from PIL import Image, ImageDraw, ImageTk
 
 class team(object):
@@ -52,33 +53,7 @@ class dataFile(object):
             self.df = pd.read_csv(self.name)
         else:
             self.df = pd.read_excel(self.name)
-class Window(Frame):
 
-    def __init__(self, master=None):
-        Frame.__init__(self, master)
-        self.master = master
-        # self.init_window()
-
-    def init_window(self):
-
-        self.master.title('CCA Scoreboard')
-
-        # self.pack(fill=BOTH, expand = 1)
-
-        Label(text = 'Roster File name (include the .csv or .xlsx)').grid(row = 0, column = 1)
-        rosterFile = Entry(master=None).grid(row = 0, column = 2, columnspan = 2)
-
-        Label(text = 'Team Colors File name (include the .csv or .xlsx)').grid(row = 1, column = 1)
-        colorFile = Entry(master=None).grid(row = 1, column = 2)
-
-        Label(text = 'Blue team').grid(row = 2, column = 1)
-
-        rosterList = getRosterList(Entry.get(rosterFile))
-
-        selectedBlue = StringVar()
-        selectedBlue.set(rosterList[0])
-
-        rosterChoice = OptionMenu(root, selectedBlue, *rosterList).grid(row = 3,column = 1)
 
 def getColor(name,wb):
 
@@ -120,6 +95,9 @@ def getRosterList(wb):
     teams = sorted(list(set(wb['Team Name'].tolist())),key=str.lower)
     return (teams)
 
+def getSchoolList(wb):
+    teams = sorted(list(set(wb['School'].tolist())),key=str.lower)
+    return (teams)
 # def getSchool(name): #Can't be implemented because data from AVGL does not include College name :(
 #     wb = pd.read_excel('RL_registered_players_March19.xlsx')
 #
@@ -228,28 +206,54 @@ def newMatch():
 # print('\nPress ENTER to exit')
 # input()
 
-roster, color = '',''
+rosterFile,colorFile = '',''
+roster = dataFile()
+color = dataFile()
 
-root = Tk()
+app = gui()
+app.setTitle('CCA Automation')
+app.set
+
+app.addLabel('rosterFileLabel','Open Roster File',0,1)
+app.addFileEntry('rosterFile',0,2)
+app.addLabel('colorFileLabel','Open Color File',1,1)
+app.addFileEntry('colorFile',1,2)
+
+app.addLabel('b','Blue',3,1)
+app.addLabel('rosterOption','Select Team',4,0)
+app.addOptionBox('teamsB',[''],4,1)
+app.addLabel('schoolOption','Select School',5,0)
+app.addOptionBox('schoolsB',[''],5,1)
+
+app.addLabel('players','Players',6,1)
+
+app.addEntry('p1',7,1)
+app.addEntry('p2',8,1)
+app.addEntry('p3',9,1)
+app.addEntry('p4',10,1)
+app.addEntry('p5',11,1)
 
 
-Label(text = 'Roster File name (include the .csv or .xlsx)').grid(row = 0, column = 1)
-rosterFile = Entry(master=None).grid(row = 0, column = 2, columnspan = 2)
 
-Label(text = 'Team Colors File name (include the .csv or .xlsx)').grid(row = 1, column = 1)
-colorFile = Entry(master=None).grid(row = 1, column = 2)
-def close_window():
-    roster = Entry.get(rosterFile)
-    color = Entry.get(colorFile)
-    root.destroy()
-quitButton = Button(root, text="Submit",command=close_window).grid(row = 2, column = 1)
 
-root.mainloop()
+def loadLists():
+    if app.getEntry('rosterFile') != '' and app.getEntry('colorFile') != '' and app.getOptionBox('teamsB') == None:
+        roster.loadFile(app.getEntry('rosterFile'))
+        color.loadFile(app.getEntry('colorFile'))
+        app.changeOptionBox('teamsB',getRosterList(roster.df))
+        app.changeOptionBox('schoolsB',getSchoolList(color.df))
 
-Label(text = roster).grid(row = 0, column = 0)
 
-root1 = Tk()
+app.registerEvent(loadLists)
 
-Label
 
-root1.mainloop()
+def loadButton(btn):
+    roster.loadFile(app.getEntry('rosterFile'))
+    color.loadFile(app.getEntry('colorFile'))
+    app.changeOptionBox('teamsB',getRosterList(roster.df))
+    app.changeOptionBox('schoolsB',getSchoolList(color.df))
+
+# app.addButton('LOAD',loadButton,2,1,2)
+
+
+app.go()
