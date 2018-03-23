@@ -2,7 +2,7 @@
  False,
  False,
  False,
- None,
+ 'icon_hS8_icon.ico',
  None,
  False,
  False,
@@ -4900,7 +4900,7 @@
  [],
  False,
  False,
- 1521815286,
+ 1521816390,
  [('runw.exe',
    'c:\\users\\joste\\appdata\\local\\programs\\python\\python36\\lib\\site-packages\\PyInstaller\\bootloader\\Windows-64bit\\runw.exe',
    'EXECUTABLE')])
