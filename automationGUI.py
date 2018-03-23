@@ -224,28 +224,34 @@ app.addLabel('colorFileLabel','Open Color File',1,1)
 app.addFileEntry('colorFile',1,2)
 
 app.addLabel('b','Blue',3,1)
-app.addLabel('rosterOption','Select Team',4,0)
+app.addLabel('rosterOption','Select Team',4,2)
 app.addOptionBox('teamsB',[''],4,1)
-app.addLabel('schoolOption','Select School',5,0)
+app.addLabel('schoolOption','Select School',5,2)
 app.addOptionBox('schoolsB',[''],5,1)
 
-app.addLabel('players','Players',6,2)
+app.addLabel('scoreboard','Scoreboard Name',6,2)
+app.addEntry('scoreboardB',6,1)
+app.addEntry('scoreboardO',6,3)
 
-app.addEntry('p1B',7,1)
-app.addEntry('p2B',8,1)
-app.addEntry('p3B',9,1)
-app.addEntry('p4B',10,1)
-app.addEntry('p5B',11,1)
+app.addLabel('players','Players',10,2)
+
+app.addEntry('p1B',8,1)
+app.addEntry('p2B',9,1)
+app.addEntry('p3B',10,1)
+app.addEntry('p4B',11,1)
+app.addEntry('p5B',12,1)
 
 app.addLabel('o','Orange',3,3)
 app.addOptionBox('teamsO',[''],4,3)
 app.addOptionBox('schoolsO',[''],5,3)
 
-app.addEntry('p1O',7,3)
-app.addEntry('p2O',8,3)
-app.addEntry('p3O',9,3)
-app.addEntry('p4O',10,3)
-app.addEntry('p5O',11,3)
+app.addEntry('p1O',8,3)
+app.addEntry('p2O',9,3)
+app.addEntry('p3O',10,3)
+app.addEntry('p4O',11,3)
+app.addEntry('p5O',12,3)
+
+app.addHorizontalSeparator(7,1,3,colour=None)
 
 
 def Update():
