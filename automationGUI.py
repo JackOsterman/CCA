@@ -264,7 +264,10 @@ app.addEntry('color2O',15,3)
 
 app.addLabel('c1','Color 1',14,2)
 app.addLabel('c2','Color 2',15,2)
+app.addLabel('preview','Preview',16,2)
 
+# bluePrev = app.addCanvas('bluePrev')
+# bluePrev.create_rectangle(50,50,fill = hexToRGB(app.getEntry('color1B')))
 
 def Update():
     global rosterPrev
@@ -315,6 +318,9 @@ def updateRosterB():
     app.setEntry('p4B',roster_[3])
     app.setEntry('p5B',roster_[4])
 
+
+    app.setEntry('scoreboardB',app.getOptionBox('teamsB'))
+
 def updateColorB():
     color_= getColor(app.getOptionBox('schoolsB'),color.df)
 
@@ -332,11 +338,44 @@ def updateRosterO():
     app.setEntry('p4O',roster_[3])
     app.setEntry('p5O',roster_[4])
 
+    app.setEntry('scoreboardO',app.getOptionBox('teamsO'))
+
 def updateColorO():
     color_= getColor(app.getOptionBox('schoolsO'),color.df)
 
     app.setEntry('color1O',color_[0])
     app.setEntry('color2O',color_[1])
+
+def getRosterB():
+    roster = ['']*5
+    roster[0]=app.getEntry('p1B')
+    roster[1]=app.getEntry('p2B')
+    roster[2]=app.getEntry('p3B')
+    roster[3]=app.getEntry('p4B')
+    roster[4]=app.getEntry('p5B')
+    return(roster)
+
+def getRosterO():
+    roster = ['']*5
+    roster[0]=app.getEntry('p1O')
+    roster[1]=app.getEntry('p2O')
+    roster[2]=app.getEntry('p3O')
+    roster[3]=app.getEntry('p4O')
+    roster[4]=app.getEntry('p5O')
+    return(roster)
+
+
+def Apply():
+    setScoreboard(t1.side,app.getEntry('scoreboardB'))
+    setScoreboard(t2.side,app.getEntry('scoreboardO'))
+
+    setRoster('Blue',getRosterB())
+    setRoster('Orange',getRosterO())
+
+    createPNG('Blue',app.getEntry('color1B'),app.getEntry('color2B'))
+    createPNG('Orange',app.getEntry('color1O'),app.getEntry('color2O'))
+
+app.addButton('Apply',Apply,17,2)
 
 app.registerEvent(Update)
 
