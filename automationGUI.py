@@ -7,7 +7,7 @@ from PIL import Image, ImageDraw, ImageTk
 
 class team(object):
 
-    name, school, scoreboard, side, color1, color2, alt1, alt2 = ['']*8
+    name, school, scoreboard, side, color1, color2, alt1, alt2,col = ['']*9
     roster = ['']*5
 
     init = False
@@ -39,7 +39,7 @@ class team(object):
         print('PNG files generated\n')
 
 class dataFile(object):
-    name, extension = '',''
+    name, extension, df = '','',''
     column = ['']*3
 
     init = False
@@ -79,17 +79,17 @@ def getColor(name,wb):
 def getRoster(name,wb):
 
     # wb = pd.read_csv(rosterFilename)
+    r = ['']*5
+    if app.getEntry('rosterFile') != '':
+        num = len(wb.index)
 
-    num = len(wb.index)
+        n = 0
 
-    roster = ['']*5
-    n = 0
-
-    for k in range(0,num):
-        if wb.iloc[k]['Team Name'] == name:
-            roster[n] = wb.iloc[k]['Username']
-            n = n + 1
-    return(roster)
+        for k in range(0,num):
+            if wb.iloc[k]['Team Name'] == name:
+                r[n] = wb.iloc[k]['Username']
+                n = n + 1
+    return(r)
 
 def getRosterList(wb):
     teams = sorted(list(set(wb['Team Name'].tolist())),key=str.lower)
@@ -206,13 +206,17 @@ def newMatch():
 # print('\nPress ENTER to exit')
 # input()
 
-rosterFile,colorFile = '',''
-roster = dataFile()
-color = dataFile()
-
 app = gui()
 app.setTitle('CCA Automation')
-app.set
+
+rosterFile,colorFile, rosterPrev, colorPrev, teamPrevB, schoolPrevB, teamPrevO, schoolPrevO = ['']*8
+roster = dataFile()
+color = dataFile()
+t1 = team()
+t2 = team()
+t1.side, t2.side = 'Blue','Orange'
+t1.col, t2.col = 1,3
+
 
 app.addLabel('rosterFileLabel','Open Roster File',0,1)
 app.addFileEntry('rosterFile',0,2)
@@ -225,35 +229,79 @@ app.addOptionBox('teamsB',[''],4,1)
 app.addLabel('schoolOption','Select School',5,0)
 app.addOptionBox('schoolsB',[''],5,1)
 
-app.addLabel('players','Players',6,1)
+app.addLabel('players','Players',6,2)
 
-app.addEntry('p1',7,1)
-app.addEntry('p2',8,1)
-app.addEntry('p3',9,1)
-app.addEntry('p4',10,1)
-app.addEntry('p5',11,1)
+app.addEntry('p1B',7,1)
+app.addEntry('p2B',8,1)
+app.addEntry('p3B',9,1)
+app.addEntry('p4B',10,1)
+app.addEntry('p5B',11,1)
 
+app.addLabel('o','Orange',3,3)
+app.addOptionBox('teamsO',[''],4,3)
+app.addOptionBox('schoolsO',[''],5,3)
 
-
-
-def loadLists():
-    if app.getEntry('rosterFile') != '' and app.getEntry('colorFile') != '' and app.getOptionBox('teamsB') == None:
-        roster.loadFile(app.getEntry('rosterFile'))
-        color.loadFile(app.getEntry('colorFile'))
-        app.changeOptionBox('teamsB',getRosterList(roster.df))
-        app.changeOptionBox('schoolsB',getSchoolList(color.df))
-
-
-app.registerEvent(loadLists)
+app.addEntry('p1O',7,3)
+app.addEntry('p2O',8,3)
+app.addEntry('p3O',9,3)
+app.addEntry('p4O',10,3)
+app.addEntry('p5O',11,3)
 
 
-def loadButton(btn):
+def Update():
+    global rosterPrev
+    global colorPrev
+    global teamPrevB
+    global teamPrevO
+
+    if app.getEntry('rosterFile') != rosterPrev:
+        updateTeams()
+        rosterPrev = app.getEntry('rosterFile')
+    if app.getEntry('colorFile') != colorPrev:
+        updateSchools()
+        colorPrev = app.getEntry('colorFile')
+
+    if app.getOptionBox('teamsB') != teamPrevB:
+        updateRosterB()
+        teamPrevB = app.getOptionBox('teamsB')
+    # if app.getEntry('schoolsB') != teamPrevO:
+    #     updateColorB()
+
+    if app.getOptionBox('teamsO') != teamPrevO:
+        updateRosterO()
+        teamPrevO = app.getOptionBox('teamsO')
+    # if app.getEntry('schoolsO') != teamPrevO:
+    #     updateColorO()
+
+
+def updateTeams():
     roster.loadFile(app.getEntry('rosterFile'))
-    color.loadFile(app.getEntry('colorFile'))
     app.changeOptionBox('teamsB',getRosterList(roster.df))
+    app.changeOptionBox('teamsO',getRosterList(roster.df))
+
+def updateSchools():
+    color.loadFile(app.getEntry('colorFile'))
     app.changeOptionBox('schoolsB',getSchoolList(color.df))
+    app.changeOptionBox('schoolsO',getSchoolList(color.df))
 
-# app.addButton('LOAD',loadButton,2,1,2)
+def updateRosterB():
+    roster_= getRoster(app.getOptionBox('teamsB'),roster.df)
 
+    app.setEntry('p1B',roster_[0])
+    app.setEntry('p2B',roster_[1])
+    app.setEntry('p3B',roster_[2])
+    app.setEntry('p4B',roster_[3])
+    app.setEntry('p5B',roster_[4])
+
+def updateRosterO():
+    roster_= getRoster(app.getOptionBox('teamsO'),roster.df)
+
+    app.setEntry('p1O',roster_[0])
+    app.setEntry('p2O',roster_[1])
+    app.setEntry('p3O',roster_[2])
+    app.setEntry('p4O',roster_[3])
+    app.setEntry('p5O',roster_[4])
+
+app.registerEvent(Update)
 
 app.go()
