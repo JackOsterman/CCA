@@ -58,20 +58,22 @@ class dataFile(object):
 def getColor(name,wb):
 
     # wb = pd.read_excel(colorFilename)
-
-    num = len(wb.index)
-
     color1 = ''
     color2 = ''
 
-    for k in range(0,num):
-        if wb.iloc[k]['School'] == name:
-            color1 = wb.iloc[k]['Color 1']
-            color2 = wb.iloc[k]['Color 2']
-    if color1 == '':
-        print('School not found\nEnter hex codes of school (# included)')
-        color1 = input('Color 1: ')
-        color2 = input('Color 2: ')
+    if app.getEntry('colorFile') != '':
+        num = len(wb.index)
+
+
+
+        for k in range(0,num):
+            if wb.iloc[k]['School'] == name:
+                color1 = wb.iloc[k]['Color 1']
+                color2 = wb.iloc[k]['Color 2']
+        if color1 == '':
+            print('School not found\nEnter hex codes of school (# included)')
+            color1 = input('Color 1: ')
+            color2 = input('Color 2: ')
 
 
     return(color1, color2)
@@ -252,6 +254,16 @@ app.addEntry('p4O',11,3)
 app.addEntry('p5O',12,3)
 
 app.addHorizontalSeparator(7,1,3,colour=None)
+app.addHorizontalSeparator(13,1,3,colour=None)
+
+app.addEntry('color1B',14,1)
+app.addEntry('color2B',15,1)
+
+app.addEntry('color1O',14,3)
+app.addEntry('color2O',15,3)
+
+app.addLabel('c1','Color 1',14,2)
+app.addLabel('c2','Color 2',15,2)
 
 
 def Update():
@@ -259,6 +271,8 @@ def Update():
     global colorPrev
     global teamPrevB
     global teamPrevO
+    global schoolPrevB
+    global schoolPrevO
 
     if app.getEntry('rosterFile') != rosterPrev:
         updateTeams()
@@ -270,14 +284,16 @@ def Update():
     if app.getOptionBox('teamsB') != teamPrevB:
         updateRosterB()
         teamPrevB = app.getOptionBox('teamsB')
-    # if app.getEntry('schoolsB') != teamPrevO:
-    #     updateColorB()
+    if app.getOptionBox('schoolsB') != schoolPrevB:
+        updateColorB()
+        schoolPrevB = app.getOptionBox('schoolsB')
 
     if app.getOptionBox('teamsO') != teamPrevO:
         updateRosterO()
         teamPrevO = app.getOptionBox('teamsO')
-    # if app.getEntry('schoolsO') != teamPrevO:
-    #     updateColorO()
+    if app.getOptionBox('schoolsO') != schoolPrevO:
+        updateColorO()
+        schoolPrevO = app.getOptionBox('schoolsO')
 
 
 def updateTeams():
@@ -299,6 +315,14 @@ def updateRosterB():
     app.setEntry('p4B',roster_[3])
     app.setEntry('p5B',roster_[4])
 
+def updateColorB():
+    color_= getColor(app.getOptionBox('schoolsB'),color.df)
+
+    app.setEntry('color1B',color_[0])
+    app.setEntry('color2B',color_[1])
+
+
+
 def updateRosterO():
     roster_= getRoster(app.getOptionBox('teamsO'),roster.df)
 
@@ -307,6 +331,12 @@ def updateRosterO():
     app.setEntry('p3O',roster_[2])
     app.setEntry('p4O',roster_[3])
     app.setEntry('p5O',roster_[4])
+
+def updateColorO():
+    color_= getColor(app.getOptionBox('schoolsO'),color.df)
+
+    app.setEntry('color1O',color_[0])
+    app.setEntry('color2O',color_[1])
 
 app.registerEvent(Update)
 
