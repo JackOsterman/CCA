@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['automationGUI.py'],
-             pathex=['C:\\Users\\joste\\Documents\\Python\\CCA'],
+             pathex=['E:\\Users\\Jack\\Pictures\\cca\\Programming'],
              binaries=[],
              datas=[],
              hiddenimports=[],
@@ -26,4 +26,4 @@ exe = EXE(pyz,
           strip=False,
           upx=True,
           runtime_tmpdir=None,
-          console=False , icon='icon_hS8_icon.ico')
+          console=False , icon='icon.ico')

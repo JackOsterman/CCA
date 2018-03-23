@@ -257,14 +257,18 @@ app.addHorizontalSeparator(7,1,3,colour=None)
 app.addHorizontalSeparator(13,1,3,colour=None)
 
 app.addEntry('color1B',14,1)
-app.addEntry('color2B',15,1)
+app.addLabel('color1Brgb','',15,1)
+app.addEntry('color2B',16,1)
+app.addLabel('color2Brgb','',17,1)
 
 app.addEntry('color1O',14,3)
-app.addEntry('color2O',15,3)
+app.addLabel('color1Orgb','',15,3)
+app.addEntry('color2O',16,3)
+app.addLabel('color2Orgb','',17,3)
 
 app.addLabel('c1','Color 1',14,2)
-app.addLabel('c2','Color 2',15,2)
-app.addLabel('preview','Preview',16,2)
+app.addLabel('c2','Color 2',16,2)
+app.addLabel('preview','Preview',18,2)
 
 # bluePrev = app.addCanvas('bluePrev')
 # bluePrev.create_rectangle(50,50,fill = hexToRGB(app.getEntry('color1B')))
@@ -375,7 +379,12 @@ def Apply():
     createPNG('Blue',app.getEntry('color1B'),app.getEntry('color2B'))
     createPNG('Orange',app.getEntry('color1O'),app.getEntry('color2O'))
 
-app.addButton('Apply',Apply,17,2)
+    app.setLabel('color1Brgb',hexToRGB(app.getEntry('color1B')))
+    app.setLabel('color2Brgb',hexToRGB(app.getEntry('color2B')))
+    app.setLabel('color1Orgb',hexToRGB(app.getEntry('color1O')))
+    app.setLabel('color2Orgb',hexToRGB(app.getEntry('color2O')))
+
+app.addButton('Apply',Apply,19,2)
 
 app.registerEvent(Update)
 
