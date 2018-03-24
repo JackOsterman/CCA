@@ -211,7 +211,7 @@ def newMatch():
 app = gui()
 app.setTitle('CCA Automation')
 
-rosterFile,colorFile, rosterPrev, colorPrev, teamPrevB, schoolPrevB, teamPrevO, schoolPrevO = ['']*8
+rosterFile,colorFile, rosterPrev, colorPrev, teamPrevB, schoolPrevB, teamPrevO, schoolPrevO, color1PrevB, color2PrevB, color1PrevO, color2PrevO = ['']*12
 roster = dataFile()
 color = dataFile()
 t1 = team()
@@ -280,6 +280,10 @@ def Update():
     global teamPrevO
     global schoolPrevB
     global schoolPrevO
+    global color1PrevB
+    global color2PrevB
+    global color1PrevO
+    global color2PrevO
 
     if app.getEntry('rosterFile') != rosterPrev:
         updateTeams()
@@ -301,6 +305,15 @@ def Update():
     if app.getOptionBox('schoolsO') != schoolPrevO:
         updateColorO()
         schoolPrevO = app.getOptionBox('schoolsO')
+
+    if app.getEntry('color1B') != color1PrevB or app.getEntry('color2B') != color2PrevB or app.getEntry('color1O') != color1PrevO or app.getEntry('color2O') != color2PrevO:
+        if len(app.getEntry('color1B'))==7 and len(app.getEntry('color2B'))==7 and len(app.getEntry('color1O'))==7 and len(app.getEntry('color2O'))==7:
+            updateRGB()
+
+            color1PrevB = app.getEntry('color1B')
+            color2PrevB = app.getEntry('color2B')
+            color1PrevO = app.getEntry('color1O')
+            color2PrevO = app.getEntry('color2O')
 
 
 def updateTeams():
@@ -331,6 +344,11 @@ def updateColorB():
     app.setEntry('color1B',color_[0])
     app.setEntry('color2B',color_[1])
 
+def updateRGB():
+    app.setLabel('color1Brgb',hexToRGB(app.getEntry('color1B')))
+    app.setLabel('color2Brgb',hexToRGB(app.getEntry('color2B')))
+    app.setLabel('color1Orgb',hexToRGB(app.getEntry('color1O')))
+    app.setLabel('color2Orgb',hexToRGB(app.getEntry('color2O')))
 
 
 def updateRosterO():
@@ -379,10 +397,6 @@ def Apply():
     createPNG('Blue',app.getEntry('color1B'),app.getEntry('color2B'))
     createPNG('Orange',app.getEntry('color1O'),app.getEntry('color2O'))
 
-    app.setLabel('color1Brgb',hexToRGB(app.getEntry('color1B')))
-    app.setLabel('color2Brgb',hexToRGB(app.getEntry('color2B')))
-    app.setLabel('color1Orgb',hexToRGB(app.getEntry('color1O')))
-    app.setLabel('color2Orgb',hexToRGB(app.getEntry('color2O')))
 
 app.addButton('Apply',Apply,19,2)
 

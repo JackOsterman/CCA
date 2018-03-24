@@ -7,12 +7,12 @@ missing module named multiprocessing.get_context - imported by multiprocessing, 
 missing module named multiprocessing.BufferTooShort - imported by multiprocessing, multiprocessing.connection
 missing module named multiprocessing.AuthenticationError - imported by multiprocessing, multiprocessing.connection
 missing module named pyimod03_importers - imported by c:\users\joste\appdata\local\programs\python\python36\lib\site-packages\PyInstaller\loader\rthooks\pyi_rth_pkgres.py
-missing module named 'pkg_resources.extern.pyparsing' - imported by pkg_resources._vendor.packaging.markers, pkg_resources._vendor.packaging.requirements
 missing module named __builtin__ - imported by pandas.compat, numpy.core.numerictypes, numpy.core.numeric, numpy.distutils.misc_util, numpy.lib.function_base, numpy.lib._iotools, numpy.ma.core, numpy, pyparsing, PIL.Image, pkg_resources._vendor.pyparsing
 missing module named ordereddict - imported by pyparsing, pkg_resources._vendor.pyparsing
 missing module named StringIO - imported by pandas.compat, six, numpy.lib.utils, numpy.testing.nose_tools.utils, numpy.lib.format, pkg_resources._vendor.six
 missing module named 'com.sun' - imported by pkg_resources._vendor.appdirs
 missing module named com - imported by pkg_resources._vendor.appdirs
+missing module named 'pkg_resources.extern.pyparsing' - imported by pkg_resources._vendor.packaging.requirements, pkg_resources._vendor.packaging.markers
 missing module named __main__ - imported by pkg_resources
 missing module named pkg_resources.extern.packaging - imported by pkg_resources.extern, pkg_resources, setuptools.dist, setuptools.command.egg_info
 missing module named pkg_resources.extern.appdirs - imported by pkg_resources.extern, pkg_resources
@@ -39,9 +39,9 @@ missing module named urllib.pathname2url - imported by urllib, pandas.io.common
 missing module named urllib.urlencode - imported by urllib, pandas.io.common, appJar.appjar
 missing module named urllib.splittag - imported by urllib, setuptools.py26compat
 missing module named grp - imported by shutil, tarfile, pathlib, distutils.archive_util, E:\Users\Jack\Pictures\cca\Programming\automationGUI.py
+missing module named 'org.python' - imported by copy, setuptools.sandbox, xml.sax, E:\Users\Jack\Pictures\cca\Programming\automationGUI.py
 missing module named pwd - imported by posixpath, shutil, tarfile, http.server, webbrowser, pathlib, distutils.util, distutils.archive_util, netrc, getpass, E:\Users\Jack\Pictures\cca\Programming\automationGUI.py
 missing module named _dummy_threading - imported by dummy_threading, E:\Users\Jack\Pictures\cca\Programming\automationGUI.py
-missing module named 'org.python' - imported by copy, setuptools.sandbox, xml.sax, E:\Users\Jack\Pictures\cca\Programming\automationGUI.py
 missing module named cffi - imported by PIL.Image, PIL.PyAccess, PIL.ImageTk
 missing module named Tkinter - imported by appJar.appjar, appJar.lib.tooltip, appJar.lib.TkDND_wrapper, appJar.lib.tkinter_png, PIL.ImageTk
 missing module named PIL._imagingagg - imported by PIL, PIL.ImageDraw
